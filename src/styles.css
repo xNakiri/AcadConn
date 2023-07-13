@@ -1,0 +1,240 @@
+.authPage {
+  background-color: #242424;
+  min-height: 99vh;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+.authPage .authContainer {
+  position: relative;
+  background-color: #c9bfbf;
+  width: 350px;
+  display: flex;
+  padding: 12px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid snow;
+  border-radius: 8px;
+}
+.authPage .authContainer .banner {
+  position: relative;
+  background-color: #e1dbdb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8px;
+  border-radius: 8px;
+}
+.authPage .authContainer .banner img {
+  height: 55px;
+  width: 55px;
+  border-radius: 50%;
+}
+.authPage .authContainer .banner h1 {
+  color: #000;
+  margin: 8px;
+  font-family: Broadway;
+}
+.authPage .authContainer .regContainer {
+  position: relative;
+  margin: 8px;
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+}
+.authPage .authContainer .regContainer h3 {
+  color: #000;
+  margin: 0 auto;
+}
+.authPage .authContainer .regContainer form {
+  border: 1px solid white;
+  display: flex;
+  flex-direction: column;
+}
+.authPage .authContainer .regContainer form input {
+  height: 24px;
+  margin: 8px;
+  position: relative;
+}
+.authPage .authContainer .regContainer form button {
+  margin: 8px;
+  position: relative;
+}
+.authPage .authContainer .logContainer {
+  position: relative;
+  margin: 8px;
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+}
+.authPage .authContainer .logContainer h3 {
+  color: #000;
+  margin: 0 auto;
+}
+.authPage .authContainer .logContainer form {
+  border: 1px solid white;
+  display: flex;
+  flex-direction: column;
+}
+.authPage .authContainer .logContainer form input {
+  margin: 8px;
+  position: relative;
+}
+.authPage .authContainer .logContainer form button {
+  margin: 8px;
+  position: relative;
+}
+
+.chatContainer {
+  position: relative;
+}
+.chatContainer header {
+  background-color: #DDE6ED;
+  position: relative;
+  display: flex;
+  border: 1px solid snow;
+  justify-content: space-between;
+  color: #000;
+}
+.chatContainer header .cardInfo {
+  display: flex;
+  align-items: center;
+}
+.chatContainer header .cardInfo img {
+  height: 55px;
+  width: 55px;
+  border-radius: 50%;
+}
+.chatContainer header .cardInfo p {
+  margin: 0;
+}
+.chatContainer header nav {
+  display: flex;
+  border: 1px solid snow;
+  overflow: scroll;
+  scrollbar-width: none;
+}
+.chatContainer header nav h4 {
+  margin-left: 8px;
+}
+.chatContainer header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.chatContainer header nav ul li {
+  margin-right: 24px;
+}
+.chatContainer header nav ul li a {
+  color: #000;
+  border: 1px solid black;
+  transition: border-width 0.1s linear;
+  padding: 3px;
+  border-radius: 5px;
+}
+.chatContainer header nav ul li a:hover {
+  color: hsla(0, 0%, 0%, 0.5);
+  border-width: 3px;
+}
+.chatContainer header nav::-webkit-scrollbar {
+  display: none;
+}
+.chatContainer main {
+  background-color: #F1F6F9;
+  position: relative;
+  height: 88vh;
+  border: 1px solid rgb(0, 0, 0);
+  display: flex;
+  color: #000;
+}
+.chatContainer main .messageCreation {
+  position: relative;
+  padding: 24px;
+  border: 1px solid rgb(0, 0, 0);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.chatContainer main .chatBar {
+  position: relative;
+  border: 1px solid #000;
+  padding: 3px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+.chatContainer main .chatBar input {
+  height: 32px;
+}
+.chatContainer main .chatBar p {
+  margin: 0;
+}
+.chatContainer main .chatBar .chatCard {
+  display: flex;
+  border: 1px solid rgb(0, 0, 0);
+  align-items: center;
+  transition: border-width 0.1s linear;
+  margin: 5px;
+  padding: 5px;
+}
+.chatContainer main .chatBar .chatCard:hover {
+  color: hsla(0, 0%, 0%, 0.5);
+  border-width: 3px;
+}
+.chatContainer main .chatMessage {
+  position: relative;
+  width: 100%;
+  border: 1px solid #000;
+}
+.chatContainer main .chatMessage .chatContent p {
+  padding: 6px;
+  border: 1px solid black;
+  height: -moz-max-content;
+  height: max-content;
+  width: 320px;
+}
+.chatContainer main .chatMessage .chatInput {
+  position: absolute;
+  right: 5px;
+  left: 5px;
+  bottom: 5px;
+  padding: 4px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+}
+.chatContainer main .chatMessage .chatInput form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.chatContainer main .chatMessage .chatInput form .inputSubject {
+  position: relative;
+}
+.chatContainer main .chatMessage .chatInput form .inputSubject label {
+  margin-right: 5px;
+}
+.chatContainer main .chatMessage .chatInput form .inputSubject label input {
+  color: #F1F6F9;
+  border: none;
+  height: 24px;
+  width: 520px;
+}
+.chatContainer main .chatMessage .chatInput form .inputMessage {
+  position: relative;
+}
+.chatContainer main .chatMessage .chatInput form .inputMessage .message {
+  color: #F1F6F9;
+  border: none;
+  height: 24px;
+  width: 520px;
+}
+.chatContainer main .chatMessage .chatInput form .inputMessage button {
+  height: auto;
+}
+.chatContainer main .chatMessage .chatInput form .inputMessage button img {
+  width: 24px;
+  height: 24px;
+}/*# sourceMappingURL=styles.css.map */

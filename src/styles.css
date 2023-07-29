@@ -1,240 +1,2116 @@
-.authPage {
-  background-color: #242424;
-  min-height: 99vh;
-  align-items: center;
-  display: flex;
-  justify-content: center;
-}
-.authPage .authContainer {
-  position: relative;
-  background-color: #c9bfbf;
-  width: 350px;
-  display: flex;
-  padding: 12px;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid snow;
-  border-radius: 8px;
-}
-.authPage .authContainer .banner {
-  position: relative;
-  background-color: #e1dbdb;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 8px;
-  border-radius: 8px;
-}
-.authPage .authContainer .banner img {
-  height: 55px;
-  width: 55px;
-  border-radius: 50%;
-}
-.authPage .authContainer .banner h1 {
-  color: #000;
-  margin: 8px;
-  font-family: Broadway;
-}
-.authPage .authContainer .regContainer {
-  position: relative;
-  margin: 8px;
-  display: flex;
-  flex-direction: column;
-  padding: 8px;
-}
-.authPage .authContainer .regContainer h3 {
-  color: #000;
-  margin: 0 auto;
-}
-.authPage .authContainer .regContainer form {
-  border: 1px solid white;
-  display: flex;
-  flex-direction: column;
-}
-.authPage .authContainer .regContainer form input {
-  height: 24px;
-  margin: 8px;
-  position: relative;
-}
-.authPage .authContainer .regContainer form button {
-  margin: 8px;
-  position: relative;
-}
-.authPage .authContainer .logContainer {
-  position: relative;
-  margin: 8px;
-  display: flex;
-  flex-direction: column;
-  padding: 8px;
-}
-.authPage .authContainer .logContainer h3 {
-  color: #000;
-  margin: 0 auto;
-}
-.authPage .authContainer .logContainer form {
-  border: 1px solid white;
-  display: flex;
-  flex-direction: column;
-}
-.authPage .authContainer .logContainer form input {
-  margin: 8px;
-  position: relative;
-}
-.authPage .authContainer .logContainer form button {
-  margin: 8px;
-  position: relative;
-}
-
-.chatContainer {
-  position: relative;
-}
-.chatContainer header {
-  background-color: #DDE6ED;
-  position: relative;
-  display: flex;
-  border: 1px solid snow;
-  justify-content: space-between;
-  color: #000;
-}
-.chatContainer header .cardInfo {
-  display: flex;
-  align-items: center;
-}
-.chatContainer header .cardInfo img {
-  height: 55px;
-  width: 55px;
-  border-radius: 50%;
-}
-.chatContainer header .cardInfo p {
-  margin: 0;
-}
-.chatContainer header nav {
-  display: flex;
-  border: 1px solid snow;
-  overflow: scroll;
-  scrollbar-width: none;
-}
-.chatContainer header nav h4 {
-  margin-left: 8px;
-}
-.chatContainer header nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-.chatContainer header nav ul li {
-  margin-right: 24px;
-}
-.chatContainer header nav ul li a {
-  color: #000;
-  border: 1px solid black;
-  transition: border-width 0.1s linear;
-  padding: 3px;
-  border-radius: 5px;
-}
-.chatContainer header nav ul li a:hover {
-  color: hsla(0, 0%, 0%, 0.5);
-  border-width: 3px;
-}
-.chatContainer header nav::-webkit-scrollbar {
-  display: none;
-}
-.chatContainer main {
-  background-color: #F1F6F9;
-  position: relative;
-  height: 88vh;
-  border: 1px solid rgb(0, 0, 0);
-  display: flex;
-  color: #000;
-}
-.chatContainer main .messageCreation {
-  position: relative;
-  padding: 24px;
-  border: 1px solid rgb(0, 0, 0);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
-.chatContainer main .chatBar {
-  position: relative;
-  border: 1px solid #000;
-  padding: 3px;
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-}
-.chatContainer main .chatBar input {
-  height: 32px;
-}
-.chatContainer main .chatBar p {
-  margin: 0;
-}
-.chatContainer main .chatBar .chatCard {
-  display: flex;
-  border: 1px solid rgb(0, 0, 0);
-  align-items: center;
-  transition: border-width 0.1s linear;
-  margin: 5px;
-  padding: 5px;
-}
-.chatContainer main .chatBar .chatCard:hover {
-  color: hsla(0, 0%, 0%, 0.5);
-  border-width: 3px;
-}
-.chatContainer main .chatMessage {
-  position: relative;
-  width: 100%;
-  border: 1px solid #000;
-}
-.chatContainer main .chatMessage .chatContent p {
-  padding: 6px;
-  border: 1px solid black;
-  height: -moz-max-content;
-  height: max-content;
-  width: 320px;
-}
-.chatContainer main .chatMessage .chatInput {
-  position: absolute;
-  right: 5px;
-  left: 5px;
-  bottom: 5px;
-  padding: 4px;
-  border: 1px solid black;
-  display: flex;
-  justify-content: space-between;
-}
-.chatContainer main .chatMessage .chatInput form {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.chatContainer main .chatMessage .chatInput form .inputSubject {
-  position: relative;
-}
-.chatContainer main .chatMessage .chatInput form .inputSubject label {
-  margin-right: 5px;
-}
-.chatContainer main .chatMessage .chatInput form .inputSubject label input {
-  color: #F1F6F9;
-  border: none;
-  height: 24px;
-  width: 520px;
-}
-.chatContainer main .chatMessage .chatInput form .inputMessage {
-  position: relative;
-}
-.chatContainer main .chatMessage .chatInput form .inputMessage .message {
-  color: #F1F6F9;
-  border: none;
-  height: 24px;
-  width: 520px;
-}
-.chatContainer main .chatMessage .chatInput form .inputMessage button {
-  height: auto;
-}
-.chatContainer main .chatMessage .chatInput form .inputMessage button img {
-  width: 24px;
-  height: 24px;
+@media (min-width: 1200px) {
+  .authPage {
+    background: rgb(80, 79, 90);
+    background: linear-gradient(315deg, rgb(80, 79, 90) 0%, rgba(216, 216, 236, 0.6348914566) 50%, rgb(80, 79, 90) 100%);
+    min-height: 99vh;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+  .authPage .authBanner {
+    background-color: #c9bfbf;
+    position: relative;
+    border: 1px solid white;
+    border-radius: 8px;
+    padding: 8px;
+    display: flex;
+  }
+  .authPage .authBanner .bannerImage img {
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    width: 390px;
+    height: 560px;
+  }
+  .authPage .authBanner .authContainer {
+    position: relative;
+    background-color: #c9bfbf;
+    width: 350px;
+    display: flex;
+    padding: 12px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+  }
+  .authPage .authBanner .authContainer .banner {
+    position: relative;
+    background-color: #e1dbdb;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px;
+    border-radius: 8px;
+  }
+  .authPage .authBanner .authContainer .banner img {
+    height: 55px;
+    width: 55px;
+    border-radius: 50%;
+  }
+  .authPage .authBanner .authContainer .banner h1 {
+    color: #000;
+    margin: 8px;
+    font-family: Broadway;
+  }
+  .authPage .authBanner .authContainer .regContainer {
+    position: relative;
+    margin: 8px;
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+  }
+  .authPage .authBanner .authContainer .regContainer h3 {
+    color: #000;
+    margin: 0 auto;
+  }
+  .authPage .authBanner .authContainer .regContainer form {
+    border: 1px solid white;
+    display: flex;
+    flex-direction: column;
+  }
+  .authPage .authBanner .authContainer .regContainer form input {
+    height: 24px;
+    margin: 8px;
+    position: relative;
+  }
+  .authPage .authBanner .authContainer .regContainer form button {
+    margin: 8px;
+    position: relative;
+  }
+  .authPage .authBanner .authContainer .logContainer {
+    position: relative;
+    margin: 8px;
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+  }
+  .authPage .authBanner .authContainer .logContainer h3 {
+    color: #000;
+    margin: 0 auto;
+  }
+  .authPage .authBanner .authContainer .logContainer form {
+    border: 1px solid white;
+    display: flex;
+    flex-direction: column;
+  }
+  .authPage .authBanner .authContainer .logContainer form input {
+    margin: 8px;
+    position: relative;
+  }
+  .authPage .authBanner .authContainer .logContainer form button {
+    margin: 8px;
+    position: relative;
+  }
+  header {
+    background-color: 212A3E;
+    position: relative;
+    display: flex;
+    border: 1px solid snow;
+    justify-content: space-between;
+    color: #000;
+  }
+  header .cardInfo {
+    margin-left: 8px;
+    display: flex;
+    align-items: center;
+  }
+  header .cardInfo img {
+    height: 36px;
+    width: 36px;
+    border-radius: 50%;
+  }
+  header .cardInfo .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  header .cardInfo .info p {
+    margin: 0;
+  }
+  header .cardInfo .info .role {
+    font-size: 12px;
+    color: #242424;
+  }
+  header nav {
+    padding: 5px;
+    display: flex;
+    border: none;
+    overflow: scroll;
+    scrollbar-width: none;
+  }
+  header nav h4 {
+    margin-left: 8px;
+    font-family: Broadway;
+  }
+  header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  header nav ul li {
+    margin-right: 24px;
+  }
+  header nav ul li label {
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 8px;
+    transition: border-width 0.1s linear;
+  }
+  header nav ul li label img {
+    height: 21px;
+    width: 21px;
+  }
+  header nav ul li label a {
+    text-decoration: none;
+    color: #000;
+    padding: 3px;
+    border-radius: 5px;
+  }
+  header nav ul li label a:hover {
+    color: hsla(0, 0%, 0%, 0.5);
+  }
+  header nav ul li label:hover {
+    border-width: 3px;
+  }
+  header nav::-webkit-scrollbar {
+    display: none;
+  }
+  .home header {
+    background-color: 212A3E;
+    position: relative;
+    display: flex;
+    border: 1px solid snow;
+    justify-content: space-between;
+    color: #000;
+  }
+  .home header .cardInfo {
+    margin-left: 8px;
+    display: flex;
+    align-items: center;
+  }
+  .home header .cardInfo img {
+    height: 36px;
+    width: 36px;
+    border-radius: 50%;
+  }
+  .home header .cardInfo .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .home header .cardInfo .info p {
+    margin: 0;
+  }
+  .home header .cardInfo .info .role {
+    font-size: 12px;
+    color: #242424;
+  }
+  .home header nav {
+    padding: 5px;
+    display: flex;
+    border: none;
+    overflow: scroll;
+    scrollbar-width: none;
+  }
+  .home header nav h4 {
+    margin-left: 8px;
+    font-family: Broadway;
+  }
+  .home header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .home header nav ul li {
+    margin-right: 24px;
+  }
+  .home header nav ul li label {
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 8px;
+    transition: border-width 0.1s linear;
+  }
+  .home header nav ul li label img {
+    height: 21px;
+    width: 21px;
+  }
+  .home header nav ul li label a {
+    text-decoration: none;
+    color: #000;
+    padding: 3px;
+    border-radius: 5px;
+  }
+  .home header nav ul li label a:hover {
+    color: hsla(0, 0%, 0%, 0.5);
+  }
+  .home header nav ul li label:hover {
+    border-width: 3px;
+  }
+  .home header nav::-webkit-scrollbar {
+    display: none;
+  }
+  .home main {
+    display: flex;
+    flex-direction: column;
+  }
+  .home main .inbox {
+    position: relative;
+    margin: 6px;
+  }
+  .home main .inbox label {
+    display: flex;
+    height: 48px;
+  }
+  .home main .inbox label img {
+    height: 36px;
+    width: 36px;
+  }
+  .home main .inbox label p {
+    margin-left: 12px;
+    color: white;
+  }
+  .home main .inbox label:hover {
+    background-color: #000;
+    color: #000;
+  }
+  .chatContainer {
+    position: relative;
+    overflow: hidden;
+  }
+  .chatContainer header {
+    background-color: 212A3E;
+    position: relative;
+    display: flex;
+    border: 1px solid snow;
+    justify-content: space-between;
+    color: #000;
+  }
+  .chatContainer header .cardInfo {
+    margin-left: 8px;
+    display: flex;
+    align-items: center;
+  }
+  .chatContainer header .cardInfo img {
+    height: 36px;
+    width: 36px;
+    border-radius: 50%;
+  }
+  .chatContainer header .cardInfo .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .chatContainer header .cardInfo .info p {
+    margin: 0;
+    margin-right: 16px;
+    color: white;
+  }
+  .chatContainer header .cardInfo .info .role {
+    font-size: 12px;
+    color: #ffffff;
+  }
+  .chatContainer header nav {
+    padding: 5px;
+    display: flex;
+    border: none;
+    overflow: scroll;
+    scrollbar-width: none;
+    color: white;
+  }
+  .chatContainer header nav h4 {
+    margin-left: 8px;
+    font-family: Broadway;
+  }
+  .chatContainer header nav h4 .link {
+    text-decoration: none;
+  }
+  .chatContainer header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .chatContainer header nav ul li {
+    margin-right: 24px;
+  }
+  .chatContainer header nav ul li label {
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 8px;
+    transition: border-width 0.1s linear;
+  }
+  .chatContainer header nav ul li label img {
+    height: 21px;
+    width: 21px;
+  }
+  .chatContainer header nav ul li label a {
+    text-decoration: none;
+    padding: 3px;
+    border-radius: 5px;
+  }
+  .chatContainer header nav ul li label a:hover {
+    color: hsla(0, 0%, 0%, 0.5);
+  }
+  .chatContainer header nav ul li label:hover {
+    border-width: 3px;
+  }
+  .chatContainer header nav::-webkit-scrollbar {
+    display: none;
+  }
+  .chatContainer main {
+    background-color: #404258;
+    position: relative;
+    height: 88vh;
+    border: 1px solid rgb(0, 0, 0);
+    display: flex;
+    color: #000;
+  }
+  .chatContainer main .messageCreation {
+    flex: 1;
+    position: relative;
+    padding-left: 12px;
+    padding-right: 12px;
+    border: none;
+    display: flex;
+    flex-direction: column;
+  }
+  .chatContainer main .messageCreation label {
+    height: 32px;
+    border: none;
+    margin-bottom: 8px;
+    margin-top: 8px;
+    border-radius: 6px;
+    font-size: 14px;
+    display: flex;
+    color: #fff;
+    align-items: center;
+    transition: background-color 0.5s ease;
+  }
+  .chatContainer main .messageCreation label button {
+    border-radius: 50%;
+    background-color: #fff;
+    margin-right: 5px;
+    border: none;
+  }
+  .chatContainer main .messageCreation label button img {
+    height: 18px;
+    width: 18px;
+  }
+  .chatContainer main .messageCreation label:hover {
+    transition-duration: 1.5;
+    background-color: hsl(0, 0%, 53%);
+  }
+  .chatContainer main .chatBar {
+    flex: 2;
+    position: relative;
+    border: 1px solid grey;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+  }
+  .chatContainer main .chatBar .chatCard {
+    display: flex;
+    color: white;
+    justify-content: space-between;
+  }
+  .chatContainer main .chatBar .search {
+    border-bottom: 1px solid gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .chatContainer main .chatBar .search img {
+    align-self: center;
+    height: 30px;
+    width: 30px;
+  }
+  .chatContainer main .chatBar .search .searchForm {
+    padding: 10px;
+  }
+  .chatContainer main .chatBar .search .searchForm input {
+    background-color: transparent;
+    border: none;
+    color: #000;
+    outline: none;
+  }
+  .chatContainer main .chatBar .search .searchForm input::-moz-placeholder {
+    color: #000;
+  }
+  .chatContainer main .chatBar .search .searchForm input::placeholder {
+    color: #000;
+  }
+  .chatContainer main .mainContainer {
+    flex: 1;
+    margin-left: 13px;
+    border: 1px solid #000;
+    width: 25%;
+    height: 90vh;
+    overflow-y: scroll;
+    position: sticky;
+    top: 6px;
+  }
+  .chatContainer main .mainContainer .cardContainer {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #000;
+    margin: 5px;
+    border-radius: 8px;
+  }
+  .chatContainer main .mainContainer .cardContainer img {
+    margin-top: 5px;
+    align-self: center;
+    border: 1px solid #000;
+    height: 240px;
+    width: 240px;
+    border-radius: 50%;
+  }
+  .chatContainer main .mainContainer .cardContainer h4 {
+    padding: 5px;
+  }
+  .chatContainer main .mainContainer .cardContainer p {
+    padding: 5px;
+    color: rgb(0, 0, 0);
+  }
+  .chatContainer main .mainContainer .cardContainer a {
+    text-decoration: none;
+    color: #000;
+  }
+  .chatContainer main .mainContainer .cardContainer button {
+    text-align: center;
+  }
+  .teacher header {
+    background-color: #212A3E;
+    position: relative;
+    display: flex;
+    border: 1px solid snow;
+    border-radius: 8px;
+    justify-content: space-between;
+    color: #ffffff;
+  }
+  .teacher header .cardInfo {
+    margin-left: 8px;
+    display: flex;
+    align-items: center;
+  }
+  .teacher header .cardInfo img {
+    height: 36px;
+    width: 36px;
+    border-radius: 50%;
+  }
+  .teacher header .cardInfo .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .teacher header .cardInfo .info p {
+    color: #fff;
+    margin: 0;
+    margin-right: 16px;
+  }
+  .teacher header .cardInfo .info .role {
+    font-size: 12px;
+    color: #ffffff;
+  }
+  .teacher header nav {
+    padding: 5px;
+    display: flex;
+    border: none;
+    overflow: scroll;
+    scrollbar-width: none;
+  }
+  .teacher header nav h4 {
+    margin-left: 8px;
+    font-family: Broadway;
+  }
+  .teacher header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .teacher header nav ul li {
+    margin-right: 24px;
+  }
+  .teacher header nav ul li label {
+    background-color: #e4e4e4;
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 8px;
+    transition: border-width 0.1s linear;
+  }
+  .teacher header nav ul li label img {
+    height: 21px;
+    width: 21px;
+  }
+  .teacher header nav ul li label a {
+    text-decoration: none;
+    color: #000000;
+    padding: 3px;
+    border-radius: 5px;
+  }
+  .teacher header nav ul li label a:hover {
+    color: hsla(0, 0%, 0%, 0.5);
+  }
+  .teacher header nav ul li label:hover {
+    border-width: 3px;
+  }
+  .teacher header nav::-webkit-scrollbar {
+    display: none;
+  }
+  .teacher main {
+    background-color: #404258;
+    position: relative;
+    height: 88vh;
+    border: 1px solid rgb(0, 0, 0);
+    display: flex;
+    color: #000;
+  }
+  .teacher main .messageCreation {
+    background-color: #DDE6ED;
+    flex: 1;
+    position: relative;
+    padding-left: 12px;
+    padding-right: 12px;
+    border: none;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    margin: 8px;
+  }
+  .teacher main .messageCreation label {
+    height: 32px;
+    border: none;
+    margin-bottom: 8px;
+    margin-top: 8px;
+    border-radius: 6px;
+    font-size: 14px;
+    display: flex;
+    color: #fff;
+    align-items: center;
+    transition: background-color 0.5s ease;
+  }
+  .teacher main .messageCreation label button {
+    border-radius: 50%;
+    background-color: #ffffff;
+    margin-right: 5px;
+    border: none;
+  }
+  .teacher main .messageCreation label button img {
+    height: 18px;
+    width: 18px;
+  }
+  .teacher main .messageCreation label a {
+    text-decoration: none;
+    color: #000;
+  }
+  .teacher main .messageCreation label:hover {
+    background-color: hsl(0, 0%, 53%);
+  }
+  .teacher main .coordinator {
+    background-color: #DDE6ED;
+    flex: 6;
+    display: flex;
+    flex-direction: column;
+    margin: 8px;
+    border-radius: 8px;
+  }
+  .teacher main .coordinator .teacherInfo .teacherCard {
+    border: 1px solid black;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px;
+  }
+  .teacher main .coordinator .teacherInfo .teacherCard .teacherFlex {
+    display: flex;
+    align-items: center;
+  }
+  .teacher main .coordinator .teacherInfo .teacherCard .teacherFlex img {
+    margin-left: 2px;
+    height: 36px;
+    width: 36px;
+    border: 1px solid black;
+    border-radius: 50%;
+  }
+  .teacher main .coordinator .teacherInfo .teacherCard .teacherFlex p {
+    margin-left: 20px;
+  }
+  .teacher main .coordinator .teacherInfo .teacherCard .teacherRank {
+    text-align: end;
+  }
+  .teacher main .coordinator .teacherInfo .teacherCard .teacherRank span {
+    margin-right: 12px;
+  }
+  .teacher main .mainContainer {
+    flex: 2;
+    margin: 8px;
+    border: 1px solid #000;
+    width: 25%;
+    border-radius: 8px;
+    overflow-y: scroll;
+    position: sticky;
+    top: 6px;
+  }
+  .teacher main .mainContainer .cardContainer {
+    background-color: #DDE6ED;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #000;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+  }
+  .teacher main .mainContainer .cardContainer img {
+    margin-top: 5px;
+    align-self: center;
+    border: 1px solid #000;
+    height: 240px;
+    width: 240px;
+    border-radius: 50%;
+  }
+  .teacher main .mainContainer .cardContainer h4 {
+    padding: 5px;
+  }
+  .teacher main .mainContainer .cardContainer .schoolCardInfo p {
+    padding: 5px;
+    color: rgb(0, 0, 0);
+  }
+  .teacher main .mainContainer .cardContainer .schoolCardInfo a {
+    text-decoration: none;
+    color: #000;
+  }
+  .teacher main .mainContainer .cardContainer .schoolCardInfo .newButton {
+    display: flex;
+    justify-content: center;
+    margin: 3px;
+  }
+  .chatNew main {
+    display: flex;
+  }
+  .chatNew main .messageCreation {
+    border-radius: 24px;
+    flex: 1;
+    position: relative;
+    padding-left: 12px;
+    padding-right: 12px;
+    border: none;
+    display: flex;
+    flex-direction: column;
+  }
+  .chatNew main .messageCreation label {
+    height: 32px;
+    border: none;
+    margin-bottom: 8px;
+    margin-top: 8px;
+    border-radius: 6px;
+    font-size: 14px;
+    display: flex;
+    color: #fff;
+    align-items: center;
+    transition: background-color 0.5s ease;
+  }
+  .chatNew main .messageCreation label button {
+    border-radius: 50%;
+    background-color: #ffffff;
+    margin-right: 5px;
+    border: none;
+  }
+  .chatNew main .messageCreation label button img {
+    height: 18px;
+    width: 18px;
+  }
+  .chatNew main .messageCreation label:hover {
+    background-color: hsl(0, 0%, 53%);
+  }
+  .chatNew main .chatMessage {
+    flex: 7;
+    height: 88vh;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid white;
+    border-radius: 24px;
+    overflow: hidden;
+  }
+  .chatNew main .chatMessage .messageBar {
+    background-color: #F1F6F9;
+    flex: 9;
+    overflow-y: scroll;
+  }
+  .chatNew main .chatMessage .messageBar .message {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  .chatNew main .chatMessage .messageBar .message .content {
+    display: flex;
+    flex-direction: column;
+  }
+  .chatNew main .chatMessage .messageBar .message .content p {
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 0px 10px 10px 10px;
+    max-width: -moz-max-content;
+    max-width: max-content;
+  }
+  .chatNew main .chatMessage .messageBar .message .content img {
+    margin: 24px;
+    border-radius: 8px;
+    width: 240px;
+  }
+  .chatNew main .chatMessage .messageBar .message.owner {
+    flex-direction: row-reverse;
+    /* Specific styles for owner messages */
+  }
+  .chatNew main .chatMessage .messageBar .message.owner .content p {
+    word-wrap: break-word;
+    height: -moz-max-content;
+    height: max-content;
+    max-width: 240px;
+    margin-right: 14px;
+    background-color: #EB455F;
+    color: white;
+    border-radius: 10px 0px 10px 10px;
+  }
+  .chatNew main .chatMessage .messageBar .message.owner .content img {
+    height: 240px;
+    width: 240px;
+    margin-right: 14px;
+    border-radius: 8px;
+  }
+  .chatNew main .chatMessage .input {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+  }
+  .chatNew main .chatMessage .input input {
+    width: 100%;
+  }
+  .chatNew main .chatMessage .input .send {
+    display: flex;
+    flex-direction: column;
+  }
+  .profileContainer header {
+    background-color: #212A3E;
+    position: relative;
+    display: flex;
+    border: 1px solid snow;
+    border-radius: 12px;
+    justify-content: space-between;
+    color: #000;
+  }
+  .profileContainer header .cardInfo {
+    margin-left: 8px;
+    display: flex;
+    align-items: center;
+    border: 1px solid;
+  }
+  .profileContainer header .cardInfo img {
+    height: 36px;
+    width: 36px;
+    border-radius: 50%;
+  }
+  .profileContainer header .cardInfo .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .profileContainer header .cardInfo .info p {
+    margin: 0;
+    color: white;
+  }
+  .profileContainer header .cardInfo .info .role {
+    font-size: 12px;
+    color: #ffffff;
+  }
+  .profileContainer header .cardInfo .Admin {
+    border-radius: 8px;
+    border: 1px solid black;
+    background-color: #000;
+    color: white;
+  }
+  .profileContainer header nav {
+    padding: 5px;
+    display: flex;
+    border: none;
+    overflow: scroll;
+    scrollbar-width: none;
+  }
+  .profileContainer header nav h4 {
+    margin-left: 8px;
+    font-family: Broadway;
+  }
+  .profileContainer header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .profileContainer header nav ul li {
+    margin-right: 24px;
+  }
+  .profileContainer header nav ul li label {
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 8px;
+    transition: border-width 0.1s linear;
+  }
+  .profileContainer header nav ul li label img {
+    height: 21px;
+    width: 21px;
+  }
+  .profileContainer header nav ul li label a {
+    text-decoration: none;
+    color: #000;
+    padding: 3px;
+    border-radius: 5px;
+  }
+  .profileContainer header nav ul li label a:hover {
+    color: hsla(0, 0%, 0%, 0.5);
+  }
+  .profileContainer header nav ul li label:hover {
+    border-width: 3px;
+  }
+  .profileContainer header nav::-webkit-scrollbar {
+    display: none;
+  }
+  .profileContainer main {
+    display: flex;
+    justify-content: center;
+  }
+  .profileContainer main .messageCreation {
+    background-color: #DDE6ED;
+    flex: 1;
+    position: relative;
+    padding-left: 12px;
+    padding-right: 12px;
+    border: none;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    margin: 8px;
+  }
+  .profileContainer main .messageCreation label {
+    height: 32px;
+    border: none;
+    margin-bottom: 8px;
+    margin-top: 8px;
+    border-radius: 6px;
+    font-size: 14px;
+    display: flex;
+    color: #fff;
+    align-items: center;
+    transition: background-color 0.5s ease;
+  }
+  .profileContainer main .messageCreation label button {
+    border-radius: 50%;
+    background-color: #ffffff;
+    margin-right: 5px;
+    border: none;
+  }
+  .profileContainer main .messageCreation label button img {
+    height: 18px;
+    width: 18px;
+  }
+  .profileContainer main .messageCreation label a {
+    text-decoration: none;
+    color: #000;
+  }
+  .profileContainer main .messageCreation label:hover {
+    background-color: hsl(0, 0%, 53%);
+  }
+  .profileContainer main .profileInfo {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+  }
+  .profileContainer main .profileInfo img {
+    height: 56px;
+    width: 56px;
+  }
+  .profileContainer main .profileInfo form {
+    width: 100%;
+  }
+  .profileContainer main .profileInfo form fieldset div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .profileContainer main .profileInfo form fieldset div input {
+    width: 340px;
+  }
+  .profileContainer main .mainContainer {
+    flex: 1;
+    margin: 8px;
+    border: 1px solid #000;
+    width: 25%;
+    height: 85vh;
+    overflow-y: scroll;
+    position: sticky;
+    top: 6px;
+  }
+  .profileContainer main .mainContainer .cardContainer {
+    background-color: #DDE6ED;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #000;
+    margin: 5px;
+    border-radius: 8px;
+  }
+  .profileContainer main .mainContainer .cardContainer img {
+    margin-top: 5px;
+    align-self: center;
+    border: 1px solid #000;
+    height: 240px;
+    width: 240px;
+    border-radius: 50%;
+  }
+  .profileContainer main .mainContainer .cardContainer .schoolCardInfo {
+    display: flex;
+    flex-direction: column;
+  }
+  .profileContainer main .mainContainer .cardContainer .schoolCardInfo h4 {
+    padding: 5px;
+  }
+  .profileContainer main .mainContainer .cardContainer .schoolCardInfo p {
+    padding: 5px;
+    color: rgb(0, 0, 0);
+  }
+  .profileContainer main .mainContainer .cardContainer .schoolCardInfo a {
+    text-decoration: none;
+    color: #000;
+  }
+  .profileContainer main .mainContainer .cardContainer .schoolCardInfo .newButton {
+    display: flex;
+    justify-content: center;
+    margin: 3px;
+  }
+  .admin header {
+    background-color: 212A3E;
+    position: relative;
+    display: flex;
+    border: 1px solid snow;
+    justify-content: space-between;
+    color: #000;
+  }
+  .admin header .cardInfo {
+    margin-left: 8px;
+    display: flex;
+    align-items: center;
+  }
+  .admin header .cardInfo img {
+    height: 36px;
+    width: 36px;
+    border-radius: 50%;
+  }
+  .admin header .cardInfo .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .admin header .cardInfo .info p {
+    margin: 0;
+  }
+  .admin header .cardInfo .info .role {
+    font-size: 12px;
+    color: #242424;
+  }
+  .admin header nav {
+    padding: 5px;
+    display: flex;
+    border: none;
+    overflow: scroll;
+    scrollbar-width: none;
+  }
+  .admin header nav h4 {
+    margin-left: 8px;
+    font-family: Broadway;
+  }
+  .admin header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .admin header nav ul li {
+    margin-right: 24px;
+  }
+  .admin header nav ul li label {
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 8px;
+    transition: border-width 0.1s linear;
+  }
+  .admin header nav ul li label img {
+    height: 21px;
+    width: 21px;
+  }
+  .admin header nav ul li label a {
+    text-decoration: none;
+    color: #000;
+    padding: 3px;
+    border-radius: 5px;
+  }
+  .admin header nav ul li label a:hover {
+    color: hsla(0, 0%, 0%, 0.5);
+  }
+  .admin header nav ul li label:hover {
+    border-width: 3px;
+  }
+  .admin header nav::-webkit-scrollbar {
+    display: none;
+  }
+  .admin main {
+    display: flex;
+    height: 88vh;
+    border: 1px solid red;
+  }
+  .admin main .adminEditAccount {
+    border: 1px solid #fff;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+  }
+  .admin main .adminEditAccount form {
+    display: flex;
+    flex-direction: column;
+  }
+  .admin main .adminEditAccount form .radioButton {
+    display: flex;
+    flex-direction: column;
+  }
+  .admin main .adminPost {
+    flex: 2;
+    border: 1px solid #fff;
+    display: flex;
+    flex-direction: column;
+  }
+  .admin main .adminPost form {
+    display: flex;
+    flex-direction: column;
+  }
+  .admin main .adminPost form input {
+    height: 48px;
+    width: 240px;
+  }
+  .admin main .adminPost form button {
+    position: absolute;
+    bottom: 12px;
+  }
+  .admin main .adminAdd {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .admin main .adminAdd form {
+    display: flex;
+    flex-direction: column;
+  }
+  .admin main .adminAdd form #schoolImage {
+    align-self: flex-end;
+  }
+  .inbox header {
+    background-color: #212A3E;
+    position: relative;
+    display: flex;
+    border: 1px solid snow;
+    justify-content: space-between;
+    color: #000;
+  }
+  .inbox header .cardInfo {
+    margin-left: 8px;
+    display: flex;
+    align-items: center;
+  }
+  .inbox header .cardInfo img {
+    height: 36px;
+    width: 36px;
+    border-radius: 50%;
+  }
+  .inbox header .cardInfo .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .inbox header .cardInfo .info p {
+    margin: 0;
+  }
+  .inbox header .cardInfo .info .role {
+    font-size: 12px;
+    color: #242424;
+  }
+  .inbox header nav {
+    padding: 5px;
+    display: flex;
+    border: none;
+    overflow: scroll;
+    scrollbar-width: none;
+  }
+  .inbox header nav h4 {
+    margin-left: 8px;
+    font-family: Broadway;
+  }
+  .inbox header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .inbox header nav ul li {
+    margin-right: 24px;
+  }
+  .inbox header nav ul li label {
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 8px;
+    transition: border-width 0.1s linear;
+  }
+  .inbox header nav ul li label img {
+    height: 21px;
+    width: 21px;
+  }
+  .inbox header nav ul li label a {
+    text-decoration: none;
+    color: #000;
+    padding: 3px;
+    border-radius: 5px;
+  }
+  .inbox header nav ul li label a:hover {
+    color: hsla(0, 0%, 0%, 0.5);
+  }
+  .inbox header nav ul li label:hover {
+    border-width: 3px;
+  }
+  .inbox header nav::-webkit-scrollbar {
+    display: none;
+  }
+  .inbox main {
+    display: flex;
+  }
+  .inbox main .messageCreation {
+    background-color: #DDE6ED;
+    flex: 1;
+    position: relative;
+    padding-left: 12px;
+    padding-right: 12px;
+    border: none;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    margin: 8px;
+  }
+  .inbox main .messageCreation label {
+    height: 32px;
+    border: none;
+    margin-bottom: 8px;
+    margin-top: 8px;
+    border-radius: 6px;
+    font-size: 14px;
+    display: flex;
+    color: #fff;
+    align-items: center;
+    transition: background-color 0.5s ease;
+  }
+  .inbox main .messageCreation label button {
+    border-radius: 50%;
+    background-color: #ffffff;
+    margin-right: 5px;
+    border: none;
+  }
+  .inbox main .messageCreation label button img {
+    height: 18px;
+    width: 18px;
+  }
+  .inbox main .messageCreation label a {
+    text-decoration: none;
+    color: #000;
+  }
+  .inbox main .messageCreation label:hover {
+    background-color: hsl(0, 0%, 53%);
+  }
+  .inbox main .chatBar {
+    background-color: #DDE6ED;
+    flex: 2;
+    margin: 8px;
+    border-radius: 8px;
+    position: relative;
+    border: 1px solid grey;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+  }
+  .inbox main .chatBar .chatCard {
+    display: flex;
+    color: rgb(0, 0, 0);
+    justify-content: space-between;
+  }
+  .inbox main .chatBar .chatCard .chatInfo {
+    display: flex;
+    align-items: center;
+  }
+  .inbox main .chatBar .chatCard .chatInfo img {
+    height: 18px;
+    width: 18px;
+  }
+  .inbox main .chatBar .search {
+    border-bottom: 1px solid gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .inbox main .chatBar .search img {
+    align-self: center;
+    height: 30px;
+    width: 30px;
+  }
+  .inbox main .chatBar .search .searchForm {
+    padding: 10px;
+  }
+  .inbox main .chatBar .search .searchForm input {
+    background-color: transparent;
+    border: none;
+    color: #000;
+    outline: none;
+  }
+  .inbox main .chatBar .search .searchForm input::-moz-placeholder {
+    color: #000;
+  }
+  .inbox main .chatBar .search .searchForm input::placeholder {
+    color: #000;
+  }
+  .inbox main .mainContainer {
+    flex: 1;
+    margin: 8px;
+    border: 1px solid #000;
+    width: 25%;
+    height: 85vh;
+    overflow-y: scroll;
+    position: sticky;
+    top: 6px;
+  }
+  .inbox main .mainContainer .cardContainer {
+    background-color: #DDE6ED;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #000;
+    margin: 5px;
+    border-radius: 8px;
+  }
+  .inbox main .mainContainer .cardContainer img {
+    margin-top: 5px;
+    align-self: center;
+    border: 1px solid #000;
+    height: 240px;
+    width: 240px;
+    border-radius: 50%;
+  }
+  .inbox main .mainContainer .cardContainer h4 {
+    padding: 5px;
+  }
+  .inbox main .mainContainer .cardContainer .schoolCardInfo p {
+    padding: 5px;
+    color: rgb(0, 0, 0);
+  }
+  .inbox main .mainContainer .cardContainer .schoolCardInfo a {
+    text-decoration: none;
+    color: #000;
+  }
+  .inbox main .mainContainer .cardContainer .schoolCardInfo .newButton {
+    display: flex;
+    justify-content: center;
+    margin: 3px;
+  }
+  .sentBox header {
+    background-color: 212A3E;
+    position: relative;
+    display: flex;
+    border: 1px solid snow;
+    justify-content: space-between;
+    color: #000;
+  }
+  .sentBox header .cardInfo {
+    margin-left: 8px;
+    display: flex;
+    align-items: center;
+  }
+  .sentBox header .cardInfo img {
+    height: 36px;
+    width: 36px;
+    border-radius: 50%;
+  }
+  .sentBox header .cardInfo .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .sentBox header .cardInfo .info p {
+    margin: 0;
+  }
+  .sentBox header .cardInfo .info .role {
+    font-size: 12px;
+    color: #242424;
+  }
+  .sentBox header nav {
+    padding: 5px;
+    display: flex;
+    border: none;
+    overflow: scroll;
+    scrollbar-width: none;
+  }
+  .sentBox header nav h4 {
+    margin-left: 8px;
+    font-family: Broadway;
+  }
+  .sentBox header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .sentBox header nav ul li {
+    margin-right: 24px;
+  }
+  .sentBox header nav ul li label {
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 8px;
+    transition: border-width 0.1s linear;
+  }
+  .sentBox header nav ul li label img {
+    height: 21px;
+    width: 21px;
+  }
+  .sentBox header nav ul li label a {
+    text-decoration: none;
+    color: #000;
+    padding: 3px;
+    border-radius: 5px;
+  }
+  .sentBox header nav ul li label a:hover {
+    color: hsla(0, 0%, 0%, 0.5);
+  }
+  .sentBox header nav ul li label:hover {
+    border-width: 3px;
+  }
+  .sentBox header nav::-webkit-scrollbar {
+    display: none;
+  }
+  .sentBox main {
+    display: flex;
+  }
+  .sentBox main .messageCreation {
+    background-color: #DDE6ED;
+    flex: 1;
+    position: relative;
+    padding-left: 12px;
+    padding-right: 12px;
+    border: none;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    margin: 8px;
+  }
+  .sentBox main .messageCreation label {
+    height: 32px;
+    border: none;
+    margin-bottom: 8px;
+    margin-top: 8px;
+    border-radius: 6px;
+    font-size: 14px;
+    display: flex;
+    color: #fff;
+    align-items: center;
+    transition: background-color 0.5s ease;
+  }
+  .sentBox main .messageCreation label button {
+    border-radius: 50%;
+    background-color: #ffffff;
+    margin-right: 5px;
+    border: none;
+  }
+  .sentBox main .messageCreation label button img {
+    height: 18px;
+    width: 18px;
+  }
+  .sentBox main .messageCreation label a {
+    text-decoration: none;
+    color: #000;
+  }
+  .sentBox main .messageCreation label:hover {
+    background-color: hsl(0, 0%, 53%);
+  }
+  .sentBox main .chatBar {
+    background-color: #DDE6ED;
+    flex: 2;
+    margin: 8px;
+    border-radius: 8px;
+    position: relative;
+    border: 1px solid grey;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+  }
+  .sentBox main .chatBar .chatCard {
+    display: flex;
+    color: rgb(0, 0, 0);
+    justify-content: space-between;
+  }
+  .sentBox main .chatBar .chatCard .chatInfo {
+    display: flex;
+    align-items: center;
+  }
+  .sentBox main .chatBar .chatCard .chatInfo img {
+    height: 18px;
+    width: 18px;
+  }
+  .sentBox main .chatBar .search {
+    border-bottom: 1px solid gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .sentBox main .chatBar .search img {
+    align-self: center;
+    height: 30px;
+    width: 30px;
+  }
+  .sentBox main .chatBar .search .searchForm {
+    padding: 10px;
+  }
+  .sentBox main .chatBar .search .searchForm input {
+    background-color: transparent;
+    border: none;
+    color: #000;
+    outline: none;
+  }
+  .sentBox main .chatBar .search .searchForm input::-moz-placeholder {
+    color: #000;
+  }
+  .sentBox main .chatBar .search .searchForm input::placeholder {
+    color: #000;
+  }
+  .sentBox main .mainContainer {
+    flex: 1;
+    margin: 8px;
+    border: 1px solid #000;
+    width: 25%;
+    height: 85vh;
+    overflow-y: scroll;
+    position: sticky;
+    top: 6px;
+  }
+  .sentBox main .mainContainer .cardContainer {
+    background-color: #DDE6ED;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #000;
+    margin: 5px;
+    border-radius: 8px;
+    border-radius: 8px;
+  }
+  .sentBox main .mainContainer .cardContainer img {
+    margin-top: 5px;
+    align-self: center;
+    border: 1px solid #000;
+    height: 240px;
+    width: 240px;
+    border-radius: 50%;
+  }
+  .sentBox main .mainContainer .cardContainer h4 {
+    padding: 5px;
+  }
+  .sentBox main .mainContainer .cardContainer .schoolCardInfo p {
+    padding: 5px;
+    color: rgb(0, 0, 0);
+  }
+  .sentBox main .mainContainer .cardContainer .schoolCardInfo a {
+    text-decoration: none;
+    color: #000;
+  }
+  .sentBox main .mainContainer .cardContainer .schoolCardInfo .newButton {
+    display: flex;
+    justify-content: center;
+    margin: 3px;
+  }
+  .important header {
+    background-color: 212A3E;
+    position: relative;
+    display: flex;
+    border: 1px solid snow;
+    justify-content: space-between;
+    color: #000;
+  }
+  .important header .cardInfo {
+    margin-left: 8px;
+    display: flex;
+    align-items: center;
+  }
+  .important header .cardInfo img {
+    height: 36px;
+    width: 36px;
+    border-radius: 50%;
+  }
+  .important header .cardInfo .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .important header .cardInfo .info p {
+    margin: 0;
+  }
+  .important header .cardInfo .info .role {
+    font-size: 12px;
+    color: #242424;
+  }
+  .important header nav {
+    padding: 5px;
+    display: flex;
+    border: none;
+    overflow: scroll;
+    scrollbar-width: none;
+  }
+  .important header nav h4 {
+    margin-left: 8px;
+    font-family: Broadway;
+  }
+  .important header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .important header nav ul li {
+    margin-right: 24px;
+  }
+  .important header nav ul li label {
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 8px;
+    transition: border-width 0.1s linear;
+  }
+  .important header nav ul li label img {
+    height: 21px;
+    width: 21px;
+  }
+  .important header nav ul li label a {
+    text-decoration: none;
+    color: #000;
+    padding: 3px;
+    border-radius: 5px;
+  }
+  .important header nav ul li label a:hover {
+    color: hsla(0, 0%, 0%, 0.5);
+  }
+  .important header nav ul li label:hover {
+    border-width: 3px;
+  }
+  .important header nav::-webkit-scrollbar {
+    display: none;
+  }
+  .important main {
+    display: flex;
+  }
+  .important main .messageCreation {
+    background-color: #DDE6ED;
+    flex: 1;
+    position: relative;
+    padding-left: 12px;
+    padding-right: 12px;
+    border: none;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    margin: 8px;
+  }
+  .important main .messageCreation label {
+    height: 32px;
+    border: none;
+    margin-bottom: 8px;
+    margin-top: 8px;
+    border-radius: 6px;
+    font-size: 14px;
+    display: flex;
+    color: #fff;
+    align-items: center;
+    transition: background-color 0.5s ease;
+  }
+  .important main .messageCreation label button {
+    border-radius: 50%;
+    background-color: #ffffff;
+    margin-right: 5px;
+    border: none;
+  }
+  .important main .messageCreation label button img {
+    height: 18px;
+    width: 18px;
+  }
+  .important main .messageCreation label a {
+    text-decoration: none;
+    color: #000;
+  }
+  .important main .messageCreation label:hover {
+    background-color: hsl(0, 0%, 53%);
+  }
+  .important main .chatBar {
+    background-color: #DDE6ED;
+    flex: 2;
+    margin: 8px;
+    border-radius: 8px;
+    position: relative;
+    border: 1px solid grey;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+  }
+  .important main .chatBar .chatCard {
+    display: flex;
+    color: rgb(0, 0, 0);
+    justify-content: space-between;
+  }
+  .important main .chatBar .chatCard .chatInfo {
+    display: flex;
+    align-items: center;
+  }
+  .important main .chatBar .chatCard .chatInfo img {
+    height: 18px;
+    width: 18px;
+  }
+  .important main .chatBar .search {
+    border-bottom: 1px solid gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .important main .chatBar .search img {
+    align-self: center;
+    height: 30px;
+    width: 30px;
+  }
+  .important main .chatBar .search .searchForm {
+    padding: 10px;
+  }
+  .important main .chatBar .search .searchForm input {
+    background-color: transparent;
+    border: none;
+    color: #000;
+    outline: none;
+  }
+  .important main .chatBar .search .searchForm input::-moz-placeholder {
+    color: #000;
+  }
+  .important main .chatBar .search .searchForm input::placeholder {
+    color: #000;
+  }
+  .important main .mainContainer {
+    flex: 1;
+    margin: 8px;
+    border: 1px solid #000;
+    width: 25%;
+    height: 85vh;
+    overflow-y: scroll;
+    position: sticky;
+    top: 6px;
+  }
+  .important main .mainContainer .cardContainer {
+    background-color: #DDE6ED;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #000;
+    margin: 5px;
+    border-radius: 8px;
+  }
+  .important main .mainContainer .cardContainer img {
+    margin-top: 5px;
+    align-self: center;
+    border: 1px solid #000;
+    height: 240px;
+    width: 240px;
+    border-radius: 50%;
+  }
+  .important main .mainContainer .cardContainer h4 {
+    padding: 5px;
+  }
+  .important main .mainContainer .cardContainer .schoolCardInfo p {
+    padding: 5px;
+    color: rgb(0, 0, 0);
+  }
+  .important main .mainContainer .cardContainer .schoolCardInfo a {
+    text-decoration: none;
+    color: #000;
+  }
+  .important main .mainContainer .cardContainer .schoolCardInfo .newButton {
+    display: flex;
+    justify-content: center;
+    margin: 3px;
+  }
+  .archive header {
+    background-color: 212A3E;
+    position: relative;
+    display: flex;
+    border: 1px solid snow;
+    justify-content: space-between;
+    color: #000;
+  }
+  .archive header .cardInfo {
+    margin-left: 8px;
+    display: flex;
+    align-items: center;
+  }
+  .archive header .cardInfo img {
+    height: 36px;
+    width: 36px;
+    border-radius: 50%;
+  }
+  .archive header .cardInfo .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .archive header .cardInfo .info p {
+    margin: 0;
+  }
+  .archive header .cardInfo .info .role {
+    font-size: 12px;
+    color: #242424;
+  }
+  .archive header nav {
+    padding: 5px;
+    display: flex;
+    border: none;
+    overflow: scroll;
+    scrollbar-width: none;
+  }
+  .archive header nav h4 {
+    margin-left: 8px;
+    font-family: Broadway;
+  }
+  .archive header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .archive header nav ul li {
+    margin-right: 24px;
+  }
+  .archive header nav ul li label {
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 8px;
+    transition: border-width 0.1s linear;
+  }
+  .archive header nav ul li label img {
+    height: 21px;
+    width: 21px;
+  }
+  .archive header nav ul li label a {
+    text-decoration: none;
+    color: #000;
+    padding: 3px;
+    border-radius: 5px;
+  }
+  .archive header nav ul li label a:hover {
+    color: hsla(0, 0%, 0%, 0.5);
+  }
+  .archive header nav ul li label:hover {
+    border-width: 3px;
+  }
+  .archive header nav::-webkit-scrollbar {
+    display: none;
+  }
+  .archive main {
+    display: flex;
+  }
+  .archive main .messageCreation {
+    background-color: #DDE6ED;
+    flex: 1;
+    position: relative;
+    padding-left: 12px;
+    padding-right: 12px;
+    border: none;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    margin: 8px;
+  }
+  .archive main .messageCreation label {
+    height: 32px;
+    border: none;
+    margin-bottom: 8px;
+    margin-top: 8px;
+    border-radius: 6px;
+    font-size: 14px;
+    display: flex;
+    color: #fff;
+    align-items: center;
+    transition: background-color 0.5s ease;
+  }
+  .archive main .messageCreation label button {
+    border-radius: 50%;
+    background-color: #ffffff;
+    margin-right: 5px;
+    border: none;
+  }
+  .archive main .messageCreation label button img {
+    height: 18px;
+    width: 18px;
+  }
+  .archive main .messageCreation label a {
+    text-decoration: none;
+    color: #000;
+  }
+  .archive main .messageCreation label:hover {
+    background-color: hsl(0, 0%, 53%);
+  }
+  .archive main .chatBar {
+    background-color: #DDE6ED;
+    flex: 2;
+    margin: 8px;
+    border-radius: 8px;
+    position: relative;
+    border: 1px solid grey;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+  }
+  .archive main .chatBar .chatCard {
+    display: flex;
+    color: rgb(0, 0, 0);
+    justify-content: space-between;
+  }
+  .archive main .chatBar .chatCard .chatInfo {
+    display: flex;
+    align-items: center;
+  }
+  .archive main .chatBar .chatCard .chatInfo img {
+    height: 18px;
+    width: 18px;
+  }
+  .archive main .chatBar .search {
+    border-bottom: 1px solid gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .archive main .chatBar .search img {
+    align-self: center;
+    height: 30px;
+    width: 30px;
+  }
+  .archive main .chatBar .search .searchForm {
+    padding: 10px;
+  }
+  .archive main .chatBar .search .searchForm input {
+    background-color: transparent;
+    border: none;
+    color: #000;
+    outline: none;
+  }
+  .archive main .chatBar .search .searchForm input::-moz-placeholder {
+    color: #000;
+  }
+  .archive main .chatBar .search .searchForm input::placeholder {
+    color: #000;
+  }
+  .archive main .mainContainer {
+    flex: 1;
+    margin: 8px;
+    border: 1px solid #000;
+    width: 25%;
+    height: 85vh;
+    overflow-y: scroll;
+    position: sticky;
+    top: 6px;
+  }
+  .archive main .mainContainer .cardContainer {
+    background-color: #DDE6ED;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #000;
+    margin: 5px;
+    border-radius: 8px;
+  }
+  .archive main .mainContainer .cardContainer img {
+    margin-top: 5px;
+    align-self: center;
+    border: 1px solid #000;
+    height: 240px;
+    width: 240px;
+    border-radius: 50%;
+  }
+  .archive main .mainContainer .cardContainer h4 {
+    padding: 5px;
+  }
+  .archive main .mainContainer .cardContainer .schoolCardInfo p {
+    padding: 5px;
+    color: rgb(0, 0, 0);
+  }
+  .archive main .mainContainer .cardContainer .schoolCardInfo a {
+    text-decoration: none;
+    color: #000;
+  }
+  .archive main .mainContainer .cardContainer .schoolCardInfo .newButton {
+    display: flex;
+    justify-content: center;
+    margin: 3px;
+  }
+  .chatNewContainer header {
+    background-color: 212A3E;
+    position: relative;
+    display: flex;
+    border: 1px solid snow;
+    justify-content: space-between;
+    color: #000;
+  }
+  .chatNewContainer header .cardInfo {
+    margin-left: 8px;
+    display: flex;
+    align-items: center;
+  }
+  .chatNewContainer header .cardInfo img {
+    height: 36px;
+    width: 36px;
+    border-radius: 50%;
+  }
+  .chatNewContainer header .cardInfo .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .chatNewContainer header .cardInfo .info p {
+    margin: 0;
+  }
+  .chatNewContainer header .cardInfo .info .role {
+    font-size: 12px;
+    color: #242424;
+  }
+  .chatNewContainer header nav {
+    padding: 5px;
+    display: flex;
+    border: none;
+    overflow: scroll;
+    scrollbar-width: none;
+  }
+  .chatNewContainer header nav h4 {
+    margin-left: 8px;
+    font-family: Broadway;
+  }
+  .chatNewContainer header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .chatNewContainer header nav ul li {
+    margin-right: 24px;
+  }
+  .chatNewContainer header nav ul li label {
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 8px;
+    transition: border-width 0.1s linear;
+  }
+  .chatNewContainer header nav ul li label img {
+    height: 21px;
+    width: 21px;
+  }
+  .chatNewContainer header nav ul li label a {
+    text-decoration: none;
+    color: #000;
+    padding: 3px;
+    border-radius: 5px;
+  }
+  .chatNewContainer header nav ul li label a:hover {
+    color: hsla(0, 0%, 0%, 0.5);
+  }
+  .chatNewContainer header nav ul li label:hover {
+    border-width: 3px;
+  }
+  .chatNewContainer header nav::-webkit-scrollbar {
+    display: none;
+  }
+  .chatNewContainer main {
+    display: flex;
+  }
+  .chatNewContainer main .messageCreation {
+    background-color: #DDE6ED;
+    flex: 1;
+    position: relative;
+    padding-left: 12px;
+    padding-right: 12px;
+    border: none;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    margin: 8px;
+  }
+  .chatNewContainer main .messageCreation label {
+    height: 32px;
+    border: none;
+    margin-bottom: 8px;
+    margin-top: 8px;
+    border-radius: 6px;
+    font-size: 14px;
+    display: flex;
+    color: #fff;
+    align-items: center;
+    transition: background-color 0.5s ease;
+  }
+  .chatNewContainer main .messageCreation label button {
+    border-radius: 50%;
+    background-color: #ffffff;
+    margin-right: 5px;
+    border: none;
+  }
+  .chatNewContainer main .messageCreation label button img {
+    height: 18px;
+    width: 18px;
+  }
+  .chatNewContainer main .messageCreation label a {
+    text-decoration: none;
+    color: #000;
+  }
+  .chatNewContainer main .messageCreation label:hover {
+    background-color: hsl(0, 0%, 53%);
+  }
+  .chatNewContainer main .newChat {
+    margin: 8px;
+    flex: 8;
+    height: 88vh;
+  }
+  .chatNewContainer main .newChat form {
+    display: flex;
+    flex-direction: column;
+  }
+  .chatNewContainer main .newChat form .textarea-container {
+    flex: 1;
+  }
+  .chatNewContainer main .newChat form .textarea-container textarea {
+    height: 70vh;
+    width: 100%;
+    resize: none;
+  }
 }/*# sourceMappingURL=styles.css.map */

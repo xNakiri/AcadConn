@@ -1,26 +1,49 @@
-import React from 'react'
-import InfoBar from './miniComponent/infoBar'
-import profile from "./../assets/profile1.png"
-import chat from "./../assets/profile2.png"
-import contact from "./../assets/profile3.png"
-import school from "./../assets/profile4.png"
+import React from 'react';
+import { Link } from 'react-router-dom';
+import InfoBar from './miniComponent/infoBar';
+import profile from './../assets/profile1.png';
+import chat from './../assets/profile2.png';
+import contact from './../assets/profile3.png';
+import school from './../assets/profile4.png';
+
 const Nav = () => {
   return (
     <>
-    <header> 
+      <header>
         <InfoBar />
         <nav>
-           <h4>AcadConnec</h4>
-            <ul>
-                <li><label><img src={profile} alt="" /><a href="#">Profile</a></label></li>
-                <li><label><img src={chat} alt="" /><a href="#">Chat</a></label></li>
-                <li><label><img src={contact} alt="" /><a href="#">Contacts</a></label></li>
-                <li><label><img src={school} alt="" /><a href="#">School</a></label></li>
-            </ul>
+          <h4><Link to="/" className='link'>AcadConnec</Link></h4>
+          <ul>
+            {/* Use Link components instead of <a> tags */}
+            <li>
+              <label>
+                <img src={profile} alt="" />
+                <Link to="/profile">Profile</Link>
+              </label>
+            </li>
+            <li>
+              <label>
+                <img src={chat} alt="" />
+                <Link to="/chatInbox">Chat</Link>
+              </label>
+            </li>
+            <li>
+              <label>
+                <img src={contact} alt="" />
+                <Link to="/teacher">Teachers</Link>
+              </label>
+            </li>
+            <li>
+              <label>
+                <img src={school} alt="" />
+                <Link to="/school">School</Link>
+              </label>
+            </li>
+          </ul>
         </nav>
-    </header>
+      </header>
     </>
-  )
-}
+  );
+};
 
-export default Nav
+export default Nav;

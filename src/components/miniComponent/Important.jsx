@@ -6,19 +6,15 @@ import { collection,
   query,
   where,
   getDocs,
-  setDoc,
   doc,
-  updateDoc,
-  addDoc,
-  serverTimestamp,
   getDoc,
-  arrayUnion,
-  FieldValue,
-  onSnapshot
 } from 'firebase/firestore';
 import { db } from '../../firebase';
 import { useNavigate } from "react-router-dom";
-const ChatBar = () => {
+import archive from "../../assets/archive.png";
+import star  from "../../assets/star.png";
+
+const Important = () => {
   let navigate = useNavigate();
   const { currentUser } = useContext(AuthContext);
   const userInfoCollection = collection(db, 'messageContent');
@@ -70,7 +66,7 @@ const ChatBar = () => {
     
     dispatch({type:"CHANGE_USER", payload: itemId});
     console.log(itemId)
-    let path = `message`; 
+    let path = `/message`; 
     navigate(path);
   };
 
@@ -81,10 +77,12 @@ const ChatBar = () => {
 
         {chatMessage.map((chat) => {
           return (
-            <div className='chatCard' onClick={() => handleSelect(chat.id)} key={chat.id}>
-              <p>{chat.userUID}</p>
+            <div className='chatCard'  key={chat.id}>
+              <p onClick={() => handleSelect(chat.id)}>{chat.senderUID}</p>
               <div className='chatInfo'>
-                <p></p>
+                <p>{chat.userUID}</p>
+                <label><button><img src={archive} /></button></label>
+                <label><button><img src={star} /></button></label>
               </div>
             </div>
           );
@@ -92,6 +90,6 @@ const ChatBar = () => {
       </div>
     </>
   );
-};
+}
 
-export default ChatBar;
+export default Important

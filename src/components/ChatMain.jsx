@@ -1,7 +1,8 @@
 import React from 'react'
 import SideBar from './miniComponent/SideBar'
 import ChatBar from './miniComponent/ChatBar'
-import ChatMessage from './miniComponent/ChatMessage'
+
+import SchoolBar from './miniComponent/SchoolBar'
 
 const ChatMain = () => {
   return (
@@ -9,7 +10,7 @@ const ChatMain = () => {
         <main>
             <SideBar />
             <ChatBar />
-            <ChatMessage />
+            <SchoolBar />
         </main>
         
        

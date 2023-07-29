@@ -1,366 +1,2463 @@
-
-
-.authPage{
-    background-color: #242424;
-    min-height: 99vh;
-    align-items: center;
-    display: flex;
-    justify-content: center;
+@media (min-width: 1200px) {
    
+  
 
-
-
-    .authContainer{
-
-        position: relative;
-        background-color: #c9bfbf;
-        width: 350px;
-        display: flex;
-        padding: 12px;
-        flex-direction: column;
+    .authPage{
+        background: rgb(80,79,90);
+        background: linear-gradient(315deg, rgba(80,79,90,1) 0%, rgba(216,216,236,0.6348914565826331) 50%, rgba(80,79,90,1) 100%);
+        min-height: 99vh;
         align-items: center;
+        display: flex;
         justify-content: center;
-        border: 1px solid snow;
-        border-radius: 8px;
-
-
-        .banner{
+       
+        .authBanner{
+            background-color: #c9bfbf;
             position: relative;
-            background-color: #e1dbdb;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            border: 1px solid white;
+            border-radius: 8px ;
             padding: 8px;
-            border-radius: 8px;
-            img{
-                height: 55px;
-                width: 55px;
-                border-radius: 50%;
+            display: flex;
+    
+            .bannerImage{
+                
+                img{
+                    border-top-left-radius: 8px;
+                    border-bottom-left-radius: 8px;
+                    width: 390px;
+                    height: 560px;
+                    
+                }
             }
-            h1{
-                color: #000;
-                margin: 8px;
-                font-family: Broadway;
-            }
-        }
+            .authContainer{
+    
+                position: relative;
+                background-color: #c9bfbf;
+                width: 350px;
+                display: flex;
+                padding: 12px;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                
+                
+                border-radius: 8px;
         
-    
-        .regContainer{
-            position: relative;
-           
-            margin: 8px;
+        
+                .banner{
+                    position: relative;
+                    background-color: #e1dbdb;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    padding: 8px;
+                    border-radius: 8px;
+                    img{
+                        height: 55px;
+                        width: 55px;
+                        border-radius: 50%;
+                    }
+                    h1{
+                        color: #000;
+                        margin: 8px;
+                        font-family: Broadway;
+                    }
+                }
+                
             
-            display: flex;
-            flex-direction: column;
-            padding: 8px;
-            h3{
-                color: #000;
-                margin: 0 auto;
-            }
-    
-            form{
-                border: 1px solid white;
-                display: flex;
-                flex-direction: column;
-                input{
-                    height: 24px;
-                    margin: 8px;
+                .regContainer{
                     position: relative;
-                }
-    
-                button{
+                   
                     margin: 8px;
-                    position: relative;
-                }
-            }
-        }
-    
-        .logContainer{
-            position: relative;
+                    
+                    display: flex;
+                    flex-direction: column;
+                    padding: 8px;
+                    h3{
+                        color: #000;
+                        margin: 0 auto;
+                    }
             
-            margin: 8px;
-           
-            display: flex;
-            flex-direction: column;
-            padding: 8px;
-            h3{
-                color: #000;
-              
-                margin: 0 auto;
-            }
-    
-            form{
-                border: 1px solid white;
-                display: flex;
-                flex-direction: column;
-                input{
-                    margin: 8px;
-                    position: relative;
+                    form{
+                        border: 1px solid white;
+                        display: flex;
+                        flex-direction: column;
+                        input{
+                            height: 24px;
+                            margin: 8px;
+                            position: relative;
+                        }
+            
+                        button{
+                            margin: 8px;
+                            position: relative;
+                        }
+                    }
                 }
-    
-                button{
-                    margin: 8px;
+            
+                .logContainer{
                     position: relative;
+                    
+                    margin: 8px;
+                   
+                    display: flex;
+                    flex-direction: column;
+                    padding: 8px;
+                    h3{
+                        color: #000;
+                      
+                        margin: 0 auto;
+                    }
+            
+                    form{
+                        border: 1px solid white;
+                        display: flex;
+                        flex-direction: column;
+                        input{
+                            margin: 8px;
+                            position: relative;
+                        }
+            
+                        button{
+                            margin: 8px;
+                            position: relative;
+                        }
+                    }
                 }
             }
         }
     }
-}
-
-.chatContainer{
-    position: relative;
-    
-    header{
-        background-color: #9BA4B5;
-        position: relative;
-        display: flex;
-        border: 1px solid snow;
-        justify-content: space-between;
-        color: #000;
-
-        .cardInfo{
-            margin-left: 8px;
+    header {
+            background-color: 212A3E;
+            position: relative;
             display: flex;
-            align-items: center;
-            
-            
-            img{
+            border: 1px solid snow;
+            justify-content: space-between;
+            color: #000;
+        
+            .cardInfo {
+              margin-left: 8px;
+              display: flex;
+              align-items: center;
+        
+              img {
                 height: 36px;
                 width: 36px;
                 border-radius: 50%;
-            }
-            .info{
+              }
+              .info {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                p{
-                    margin: 0;
+                p {
+                  margin: 0;
                 }
-                .role{ 
-                    font-size: 12px;
-                    color:#242424
+                .role {
+                  font-size: 12px;
+                  color: #242424;
                 }
+              }
             }
-        }
-
-        nav{
-            display: flex;
-            border: none;
-            overflow: scroll;
-            scrollbar-width: none;
-            h4{
-                margin-left: 8px ;
+        
+            nav {
+              padding: 5px;
+              display: flex;
+              border: none;
+              overflow: scroll;
+              scrollbar-width: none;
+        
+              h4 {
+                margin-left: 8px;
                 font-family: Broadway;
-
-            }
-            ul{
+              }
+        
+              ul {
                 list-style: none;
                 display: flex;
                 justify-content: space-around;
                 align-items: center;
-                li{
-                    margin-right: 24px;
-                    
-                    label{
-                        display: flex;
-                        align-items: center;
-                        border: 1px solid black;
-                        border-radius: 8px;
-                        transition: border-width 0.1s linear;
-                        img{
-                            height: 21px;
-                            width: 21px;
-                        }
-
-                        a{  
-                            text-decoration: none;
-                            color: #000;
-                            
-                            padding: 3px;
-                            border-radius: 5px;
-                            &:hover{
-                                color: hsl(0, 0%, 0%, 0.5);
-                                
-                            }
-                        }
-                        &:hover{
-                            border-width: 3px;
-                        }
-                        
+        
+                li {
+                  margin-right: 24px;
+        
+                  label {
+                    display: flex;
+                    align-items: center;
+                    border: 1px solid black;
+                    border-radius: 8px;
+                    transition: border-width 0.1s linear;
+        
+                    img {
+                      height: 21px;
+                      width: 21px;
                     }
+        
+                    a {
+                      text-decoration: none;
+                      color: #000;
+                      padding: 3px;
+                      border-radius: 5px;
+        
+                      &:hover {
+                        color: hsl(0, 0%, 0%, 0.5);
+                      }
+                    }
+        
+                    &:hover {
+                      border-width: 3px;
+                    }
+                  }
                 }
-            }
-            &::-webkit-scrollbar{
+              }
+              &::-webkit-scrollbar {
                 display: none;
+              }
             }
         }
-    }
+        .home{
+          header {
+            background-color: 212A3E;
+            position: relative;
+            display: flex;
+            border: 1px solid snow;
+            justify-content: space-between;
+            color: #000;
+        
+            .cardInfo {
+              margin-left: 8px;
+              display: flex;
+              align-items: center;
+        
+              img {
+                height: 36px;
+                width: 36px;
+                border-radius: 50%;
+              }
+              .info {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                p {
+                  margin: 0;
+                }
+                .role {
+                  font-size: 12px;
+                  color: #242424;
+                }
+              }
+            }
+        
+            nav {
+              padding: 5px;
+              display: flex;
+              border: none;
+              overflow: scroll;
+              scrollbar-width: none;
+        
+              h4 {
+                margin-left: 8px;
+                font-family: Broadway;
+              }
+        
+              ul {
+                list-style: none;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+        
+                li {
+                  margin-right: 24px;
+        
+                  label {
+                    display: flex;
+                    align-items: center;
+                    border: 1px solid black;
+                    border-radius: 8px;
+                    transition: border-width 0.1s linear;
+        
+                    img {
+                      height: 21px;
+                      width: 21px;
+                    }
+        
+                    a {
+                      text-decoration: none;
+                      color: #000;
+                      padding: 3px;
+                      border-radius: 5px;
+        
+                      &:hover {
+                        color: hsl(0, 0%, 0%, 0.5);
+                      }
+                    }
+        
+                    &:hover {
+                      border-width: 3px;
+                    }
+                  }
+                }
+              }
+              &::-webkit-scrollbar {
+                display: none;
+              }
+            }
+          }
+          main{
+            display: flex;
+            flex-direction: column;
+            
+          
 
-    main{
-        background-color: #F1F6F9;
+            .inbox{
+              position: relative;
+              margin: 6px;
+              label{
+               display: flex;
+                height: 48px;
+                
+                img{
+                  height: 36px;
+                  width: 36px;
+                }
+                p{
+                  margin-left: 12px;
+                  color: white;
+                }
+
+                &:hover{
+                  background-color: #000;
+                  color:#000;
+                }
+              }
+            }
+          }
+
+        
+        }
+    .chatContainer {
         position: relative;
-        height: 88vh;
-        border: 1px solid rgb(0, 0, 0);
-        display: flex;
-        color: #000;
+        overflow: hidden;
+      
+        header {
+          background-color: 212A3E;
+          position: relative;
+          display: flex;
+          border: 1px solid snow;
+          justify-content: space-between;
+          color: #000;
+      
+          .cardInfo {
+            margin-left: 8px;
+            display: flex;
+            align-items: center;
+      
+            img {
+              height: 36px;
+              width: 36px;
+              border-radius: 50%;
+            }
+            .info {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              p {
+                margin: 0;
+                margin-right: 16px;
+                color: white;
+              }
+              .role {
+                font-size: 12px;
+                color: #ffffff;
+              }
+            }
+          }
+      
+          nav {
+            padding: 5px;
+            display: flex;
+            border: none;
+            overflow: scroll;
+            scrollbar-width: none;
+            color: white;
 
-        .messageCreation{
+            h4 {
+              margin-left: 8px;
+              font-family: Broadway;
+              
+              
+              .link{
+                text-decoration: none;
+                
+              }
+            }
+      
+            ul {
+              list-style: none;
+              display: flex;
+              justify-content: space-around;
+              align-items: center;
+              
+              li {
+                margin-right: 24px;
+      
+                label {
+                  display: flex;
+                  align-items: center;
+                  border: 1px solid black;
+                  border-radius: 8px;
+                  transition: border-width 0.1s linear;
+      
+                  img {
+                    height: 21px;
+                    width: 21px;
+                  }
+      
+                  a {
+                    text-decoration: none;
+                    color: #F1F6F9;
+                    padding: 3px;
+                    border-radius: 5px;
+      
+                    &:hover {
+                      color: hsl(0, 0%, 0%, 0.5);
+                    }
+                  }
+      
+                  &:hover {
+                    border-width: 3px;
+                  }
+                }
+              }
+            }
+            &::-webkit-scrollbar {
+              display: none;
+            }
+          }
+        }
+      
+        main {
+          background-color: #404258;
+          position: relative;
+          height: 88vh;
+          border: 1px solid rgb(0, 0, 0);
+          display: flex;
+          color: #000;
+      
+          .messageCreation {
+            flex: 1;
             position: relative;
             padding-left: 12px;
             padding-right: 12px;
             border: none;
             display: flex;
             flex-direction: column;
-            
-
-            label{
+      
+            label {
+                height: 32px;
                 border: none;
                 margin-bottom: 8px;
                 margin-top: 8px;
-                border-radius: 12px;
-                font-size: 12px;
+                border-radius: 6px;
+                font-size: 14px;
                 display: flex;
+                color: #fff;
                 align-items: center;
-
-                button{
+                transition: background-color 0.5s ease;
+                button {
                     border-radius: 50%;
-                    background-color:#ffffff;
+                    background-color: #fff;
                     margin-right: 5px;
                     border: none;
-                    img{
-                        height: 18px;
-                        width: 18px;
-                    }
-                   
-                } 
-                &:hover{
-                        background-color:hsl(0, 0%, 53%);
-                    }
+                    
+
+                  img {
+                    height: 18px;
+                    width: 18px;
+                  }
+                }
+              
+              &:hover {
+                transition-duration: 1.5;  
+                background-color: hsl(0, 0%, 53%);
+              }
             }
-        }
-        .chatBar{
-            position: relative;
-            border: 1px solid grey;
-            padding: 12px;
+          }
+      
+        .chatBar {
+          flex: 2;
+          position: relative;
+          border: 1px solid grey;
+          padding: 12px;
+          display: flex;
+          flex-direction: column;
+          justify-content: start;
+      
+          .chatCard{
+            display: flex;
+            color: white;
+            justify-content: space-between;
+          }
+          .search {
+            border-bottom: 1px solid gray;
             display: flex;
             flex-direction: column;
-            justify-content: start;
-            input{
-                
-                height: 32px;
+            justify-content: space-between;
+      
+            img {
+              align-self: center;
+              height: 30px;
+              width: 30px;
             }
-            p{
-                margin: 0;
+      
+              .searchForm {
+                padding: 10px;
+      
+                input {
+                  background-color: transparent;
+                  border: none;
+                  color: #000;
+                  outline: none;
+      
+                  &::placeholder {
+                    color: #000;
+                  }
+                }
+              }
             }
-
-            .chatCard{
-                display: flex;
-                justify-content: space-between;
-                border: 1px solid grey;
-                align-items: center;
-                transition: border-width 0.1s linear;
-                border-radius: 6px;
-                margin: 5px;
+          }
+        
+          .mainContainer {
+            flex: 1;
+            margin-left: 13px;
+            border: 1px solid #000;
+            width: 25%;
+            height: 90vh;
+            overflow-y: scroll;
+            position: sticky;
+            top: 6px;
+          
+            .cardContainer {
+              display: flex;
+              flex-direction: column;
+              border: 1px solid #000;
+              margin: 5px;
+              border-radius: 8px;
+          
+              img {
+                margin-top: 5px;
+                align-self: center;
+                border: 1px solid #000;
+                height: 240px;
+                width: 240px;
+                border-radius: 50%;
+              }
+          
+              h4 {
                 padding: 5px;
-                font-size: 12px;
-
-                .chatInfo{
-                    margin-left: 8px;
-                }
-                &:hover{
-                    color: hsl(0, 0%, 0%, 0.5);
-                    border-width: 3px;
-                
-                }
+              }
+          
+              p {
+                padding: 5px;
+                color: rgb(0, 0, 0);
+              }
+              a{
+                text-decoration: none;
+                color: #000;
+              }
+              button{
+                text-align: center;
+              }
             }
+          }
+        }   
         }
 
-        .chatMessage{
+
+        .teacher{
+
+          header {
+            background-color: #212A3E;
             position: relative;
-            width: 100%;            
-            border: 1px solid grey;
+            display: flex;
+            border: 1px solid snow;
+            border-radius: 8px;
+            justify-content: space-between;
+            color: #F1F6F9;
+        
+            .cardInfo {
+              margin-left: 8px;
+              display: flex;
+              align-items: center;
+        
+              img {
+                height: 36px;
+                width: 36px;
+                border-radius: 50%;
+              }
+                .info {
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
 
-            .chatSubject{
-                display: flex;
-                justify-content: center;
-                border-bottom: 1px solid grey;
-            }
-
-            .chatContent{
-                position: relative;
+                  p {
+                    color: #fff;
+                  margin: 0;
+                  margin-right: 16px;
+                  }
+                  .role {
+                    font-size: 12px;
+                    color: #ffffff;
+                  }
+                }
+              }
+        
+              nav {
                 padding: 5px;
-                min-width: auto;
-                max-width: 230px;
-
-                    p{  
-                        margin: 5px;
-                        padding: 6px;
-                        border: 1px solid black;
-                        border-radius: 8px;
-                        height: max-content;
-                        width: auto;    
-                        transition: border-width 0.1s linear;
-                        &:hover{
-                            border-width: 3px;
-                        }
-                    }
-                
-            }
-
-            .chatInput{
-                position: absolute;
-                right: 5px;
-                left: 5px;
-                bottom: 5px;
-                padding: 4px;
-                border: 1px solid grey;
                 display: flex;
-                justify-content: space-between;
-                
-                form{
+                border: none;
+                overflow: scroll;
+                scrollbar-width: none;
+        
+                h4 {
+                  margin-left: 8px;
+                  font-family: Broadway;
+                }
+        
+                ul{
+                  list-style: none;
+                  display: flex;
+                  justify-content: space-around;
+                  align-items: center;
+        
+                  li {
+                    margin-right: 24px;
+        
+                  label {
+                    
                     display: flex;
                     align-items: center;
+                    border: 1px solid black;
+                    border-radius: 8px;
+                    transition: border-width 0.1s linear;
+        
+                    img {
+                      height: 21px;
+                      width: 21px;
+                    }
+        
+                    a {
+                      text-decoration: none;
+                      color: #F1F6F9;
+                      padding: 3px;
+                      border-radius: 5px;
+        
+                      &:hover {
+                        color: hsl(0, 0%, 0%, 0.5);
+                      }
+                    }
+        
+                    &:hover {
+                      border-width: 3px;
+                    }
+                  }
+                }
+              }
+              &::-webkit-scrollbar {
+                display: none;
+              }
+            }
+          }
+          main{
+            background-color: #404258;
+            position: relative;
+            height: 88vh;
+            border: 1px solid rgb(0, 0, 0);
+            display: flex;
+            color: #000;
+            
+            .messageCreation{
+              background-color: #DDE6ED;
+              flex: 1;
+              position: relative;
+              padding-left: 12px;
+              padding-right: 12px;
+              border: none;
+              border-radius: 8px;
+              display: flex;
+              flex-direction: column;
+              margin: 8px;
+    
+              label{
+                height: 32px;
+                border: none;
+                margin-bottom: 8px;
+                margin-top: 8px;
+                border-radius: 6px;
+                font-size: 14px;
+                display: flex;
+                color: #fff;
+                align-items: center;
+                transition: background-color 0.5s ease;
+
+                button{
+                  border-radius: 50%;
+                  background-color:#ffffff;
+                  margin-right: 5px;
+                  border: none;
+
+                  img{
+                    height: 18px;
+                    width: 18px;
+                  }
+                       
+                } 
+                a {
+                  text-decoration: none;
+                  color: #000;
+                }
+                
+                &:hover{
+                  background-color:hsl(0, 0%, 53%);
+                }
+              }
+            }
+            .coordinator{
+              background-color: #DDE6ED;
+              flex: 6;
+              display: flex;
+              flex-direction: column;
+              margin: 8px;
+              border-radius: 8px;
+              .teacherInfo{
+                
+                
+                .teacherCard{
+                    border: 1px solid black;
+                    border-radius: 8px;
+                    display: flex;
+                    flex-direction: row;
                     justify-content: space-between;
-                    
-                    .inputSubject{
-                        position: relative;
-                        
-                        label{
-                            margin-right: 5px;
-                            input{
-                            color: #F1F6F9;
-                            border: none;
-                            height: 24px;
-                            width: 520px;
-                            }
+                    align-items: center;
+                    margin: 5px;
+                    .teacherFlex{
+                        display: flex;
+                        align-items: center;
+                        img{
+                            margin-left: 2px;
+                            height: 36px;
+                            width: 36px;
+                            border: 1px solid black;
+                            border-radius: 50%;
+                        }
+                        p{
+                            margin-left: 20px;
                         }
                     }
-                    
-                  
-                    .inputMessage{
-                        position: relative;
-                    
-
-                        .message{
-    
-                            color: #F1F6F9;
-                            border: none;
-                            height: max-content;
-                            width: 520px;
-                            resize: none;
-                        }
+                    .teacherRank{
                         
-                        button{
-                            height: auto;
+                        text-align: end;
+                        span{
                             
-                            img{
-                            width: 24px;
-                            height: 24px;
+                            margin-right: 12px;
+                           
+                        }
+                    }
+                }
+              }
+            }
+
+            .mainContainer {
+                flex: 2;
+                margin: 8px;
+                border: 1px solid #000;
+                width: 25%;
+                border-radius: 8px;
+                overflow-y: scroll;
+                position: sticky;
+                top: 6px;
+                .cardContainer {
+                    background-color: #DDE6ED;
+                    display: flex;
+                    flex-direction: column;
+                    border: 1px solid #000;
+                    margin-top: 8px;
+                    margin-bottom: 8px;
+                    border-radius: 8px;
+                    img {
+                        margin-top: 5px;
+                        align-self: center;
+                        border: 1px solid #000;
+                        height: 240px;
+                        width: 240px;
+                        border-radius: 50%;
+                      }
+                    h4{
+                        padding: 5px;
+                    }
+                    .schoolCardInfo{
+                      p {
+                        padding: 5px;
+                        color: rgb(0, 0, 0);
+                      }
+                      a{
+                        text-decoration: none;
+                        color: #000;
+                      }
+                      .newButton{
+                        display: flex;
+                        justify-content: center;
+                        margin: 3px;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+
+    .chatNew{
+      
+      main{
+        display: flex;
+
+
+        .messageCreation{
+          border-radius: 24px;
+          flex: 1;
+          position: relative;
+          padding-left: 12px;
+          padding-right: 12px;
+          border: none;
+          display: flex;
+          flex-direction: column;
+          
+  
+          label{
+              height: 32px;
+              border: none;
+              margin-bottom: 8px;
+              margin-top: 8px;
+              border-radius: 6px;
+              font-size: 14px;
+              display: flex;
+              color: #fff;
+              align-items: center;
+              transition: background-color 0.5s ease;
+  
+              button{
+                  border-radius: 50%;
+                  background-color:#ffffff;
+                  margin-right: 5px;
+                  border: none;
+                  img{
+                      height: 18px;
+                      width: 18px;
+                  }
+                 
+              } 
+              &:hover{
+                      background-color:hsl(0, 0%, 53%);
+              }
+            }
+          }
+  
+          
+              
+        .chatMessage{
+
+          flex: 7;
+          height: 88vh;
+          display: flex;
+          flex-direction: column;
+          border: 1px solid white;
+          border-radius: 24px;
+          overflow: hidden;
+          .messageBar{
+            background-color: #F1F6F9;
+            flex: 9;
+            overflow-y: scroll;
+            
+            .message {
+              display: flex;
+              flex-direction: column;
+              margin-bottom: 20px;
+            
+              .content {
+                display: flex;
+                flex-direction: column;
+            
+                p {
+                  background-color: white;
+                  padding: 10px 20px;
+                  border-radius: 0px 10px 10px 10px;
+                  max-width: max-content;
+                }
+            
+                img {
+                  margin: 24px;
+                  border-radius: 8px;
+                  width: 240px;
+                }
+              }
+            
+              &.owner {
+                flex-direction: row-reverse;
+                
+                /* Specific styles for owner messages */
+                .content {
+                  p {
+                    word-wrap: break-word;
+                    height: max-content;
+                    max-width: 240px;
+                    margin-right: 14px;
+                    background-color: #EB455F;
+                    color: white;
+                    border-radius: 10px 0px 10px 10px;
+                  }
+            
+                  img {
+                    height: 240px;
+                    width: 240px;
+                    margin-right: 14px;
+                    border-radius: 8px;
+                  }
+                }
+              }
+            }
+          }
+
+          .input{
+            
+            flex: 1;
+            display: flex;
+            justify-content: space-between;
+            input{
+              width: 100%;
+            }
+            .send{
+              display: flex;
+              flex-direction: column;
+            }
+          }
+        }
+      }
+      
+
+      
+    }
+
+    .profileContainer{
+      header {
+        background-color: #212A3E;
+        position: relative;
+        display: flex;
+        border: 1px solid snow;
+        border-radius: 12px;
+        justify-content: space-between;
+        color: #F1F6F9;
+        
+            .cardInfo {
+              margin-left: 8px;
+              display: flex;
+              align-items: center;
+              border: 1px solid;
+              img {
+                height: 36px;
+                width: 36px;
+                border-radius: 50%;
+              }
+              .info {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                
+                p {
+                  margin: 0;
+                  color: white;
+                }
+                .role {
+                  font-size: 12px;
+                  color: #ffffff;
+                }
+              }
+              .Admin{
+                border-radius: 8px;
+                border: 1px solid black;
+                background-color: #000;
+                color: white;
+              }
+            }
+        
+            nav {
+              padding: 5px;
+              display: flex;
+              border: none;
+              overflow: scroll;
+              scrollbar-width: none;
+        
+              h4 {
+                margin-left: 8px;
+                font-family: Broadway;
+              }
+        
+              ul {
+                list-style: none;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+        
+                li {
+                  margin-right: 24px;
+        
+                  label {
+                    display: flex;
+                    align-items: center;
+                    color: #F1F6F9;
+                    border-radius: 8px;
+                    transition: border-width 0.1s linear;
+        
+                    img {
+                      height: 21px;
+                      width: 21px;
+                    }
+        
+                    a {
+                      text-decoration: none;
+                      color: #000;
+                      padding: 3px;
+                      border-radius: 5px;
+        
+                      &:hover {
+                        color: hsl(0, 0%, 0%, 0.5);
+                      }
+                    }
+        
+                    &:hover {
+                      border-width: 3px;
+                    }
+                  }
+                }
+              }
+              &::-webkit-scrollbar {
+                display: none;
+              }
+            }
+        }
+        main{
+            display: flex;
+            justify-content: center;
+            .messageCreation{
+              background-color: #DDE6ED;
+              flex: 1;
+              position: relative;
+              padding-left: 12px;
+              padding-right: 12px;
+              border: none;
+              border-radius: 8px;
+              display: flex;
+              flex-direction: column;
+              margin: 8px;
+      
+              label{
+                height: 32px;
+                border: none;
+                margin-bottom: 8px;
+                margin-top: 8px;
+                border-radius: 6px;
+                font-size: 14px;
+                display: flex;
+                color: #fff;
+                align-items: center;
+                transition: background-color 0.5s ease;
+      
+                button{
+                  border-radius: 50%;
+                  background-color:#ffffff;
+                  margin-right: 5px;
+                  border: none;
+      
+                  img{
+                    height: 18px;
+                    width: 18px;
+                  }
+                       
+                } 
+                a {
+                  text-decoration: none;
+                  color: #000;
+                }
+                
+                &:hover{
+                  background-color:hsl(0, 0%, 53%);
+                }
+              }
+            }
+            .profileInfo{
+                flex: 2;
+                display: flex;
+                flex-direction: column;
+                justify-items: center;
+                align-items: center;
+                img{
+                    
+                    height: 56px;
+                    width: 56px;
+                }
+                form{
+                    width: 100%;
+                    
+                    fieldset{
+                        
+                        div{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-around;
+                        align-items: center;
+                            input{
+                                width: 340px;
                             }
                         }
-                    } 
+                    }     
+                }
+            }
+            .mainContainer {
+              flex: 1;
+              margin: 8px;
+              border: 1px solid #000;
+              width: 25%;
+              height: 85vh;
+              overflow-y: scroll;
+              position: sticky;
+              top: 6px;
+            
+              .cardContainer {
+                background-color: #DDE6ED;
+                display: flex;
+                flex-direction: column;
+                border: 1px solid #000;
+                margin: 5px;
+                border-radius: 8px;
+                    img {
+                        margin-top: 5px;
+                        align-self: center;
+                        border: 1px solid #000;
+                        height: 240px;
+                        width: 240px;
+                        border-radius: 50%;
+                      }
+                   .schoolCardInfo{
+                    display: flex;
+                    flex-direction: column;
+                    h4{
+                      padding: 5px;
+                    }
+                    p {
+                      padding: 5px;
+                      color: rgb(0, 0, 0);
+                    }
+                    a{
+                      text-decoration: none;
+                      color: #000;
+                    }
+                    .newButton{
+                      display: flex;
+                      justify-content: center;
+                      margin: 3px;
+                    }
+                   }
                 }
             }
         }
     }
-}
+    .admin{
+        header {
+            background-color: 212A3E;
+            position: relative;
+            display: flex;
+            border: 1px solid snow;
+            justify-content: space-between;
+            color: #F1F6F9;
+        
+            .cardInfo {
+              margin-left: 8px;
+              display: flex;
+              align-items: center;
+        
+              img {
+                height: 36px;
+                width: 36px;
+                border-radius: 50%;
+              }
+              .info {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                p {
+                  margin: 0;
+                }
+                .role {
+                  font-size: 12px;
+                  color: #242424;
+                }
+              }
+            }
+        
+            nav {
+              padding: 5px;
+              display: flex;
+              border: none;
+              overflow: scroll;
+              scrollbar-width: none;
+        
+              h4 {
+                margin-left: 8px;
+                font-family: Broadway;
+              }
+        
+              ul {
+                list-style: none;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+        
+                li {
+                  margin-right: 24px;
+        
+                  label {
+                    display: flex;
+                    align-items: center;
+                    border: 1px solid black;
+                    border-radius: 8px;
+                    transition: border-width 0.1s linear;
+        
+                    img {
+                      height: 21px;
+                      width: 21px;
+                    }
+        
+                    a {
+                      text-decoration: none;
+                      color: #000;
+                      padding: 3px;
+                      border-radius: 5px;
+        
+                      &:hover {
+                        color: hsl(0, 0%, 0%, 0.5);
+                      }
+                    }
+        
+                    &:hover {
+                      border-width: 3px;
+                    }
+                  }
+                }
+              }
+              &::-webkit-scrollbar {
+                display: none;
+              }
+            }
+        }
+        main{
+            display: flex;
+            height: 88vh;
+            border: 1px solid red;
+            .adminEditAccount{
+                border: 1px solid #fff;
+                display: flex;
+              
+                flex: 1;
+                flex-direction: column;
+
+                form{
+                  display: flex;
+                  flex-direction: column;
+                  .radioButton{
+                    display: flex;
+                    flex-direction: column;
+  
+  
+                  }
+                }
+            }
+
+            .adminPost{
+                flex: 2;
+                border: 1px solid #fff;
+                display: flex;
+                flex-direction: column;
+                
+               form{
+                display: flex;
+                flex-direction: column;
+
+                input{
+                  height: 48px;
+                  width: 240px;
+                }
+
+                button{
+                  position: absolute;
+                  bottom: 12px;
+                }
+               }
+
+                
+            }
+            .adminAdd{
+              flex: 1;
+              display: flex;
+              flex-direction: column;
+              justify-content: space-around;
+              align-items: center;
+
+              form{
+                display: flex;
+                flex-direction: column;
+
+                #schoolImage{
+                  align-self: flex-end;
+                }
+              }
+            }
+
+        }
+    }
+    
+    .inbox{
+      header {
+        background-color: #212A3E;
+        position: relative;
+        display: flex;
+        border: 1px solid snow;
+        justify-content: space-between;
+        color: #F1F6F9;
+    
+        .cardInfo {
+          margin-left: 8px;
+          display: flex;
+          align-items: center;
+    
+          img {
+            height: 36px;
+            width: 36px;
+            border-radius: 50%;
+          }
+          .info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            p {
+              color: #F1F6F9;
+              margin: 0;
+            }
+            .role {
+              font-size: 12px;
+              color: #242424;
+            }
+          }
+        }
+    
+        nav {
+          padding: 5px;
+          display: flex;
+          border: none;
+          overflow: scroll;
+          scrollbar-width: none;
+    
+          h4 {
+            margin-left: 8px;
+            font-family: Broadway;
+          }
+    
+          ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+    
+            li {
+              margin-right: 24px;
+    
+              label {
+                display: flex;
+                align-items: center;
+                border: 1px solid black;
+                border-radius: 8px;
+                transition: border-width 0.1s linear;
+    
+                img {
+                  height: 21px;
+                  width: 21px;
+                }
+    
+                a {
+                  text-decoration: none;
+                  color: #F1F6F9;
+                  padding: 3px;
+                  border-radius: 5px;
+    
+                  &:hover {
+                    color: hsl(0, 0%, 0%, 0.5);
+                  }
+                }
+    
+                &:hover {
+                  border-width: 3px;
+                }
+              }
+            }
+          }
+          &::-webkit-scrollbar {
+            display: none;
+          }
+        }
+        
+    }
+
+    main{
+      display: flex;
+
+      .messageCreation{
+        background-color: #DDE6ED;
+        flex: 1;
+        position: relative;
+        padding-left: 12px;
+        padding-right: 12px;
+        border: none;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        margin: 8px;
+
+        label{
+          height: 32px;
+          border: none;
+          margin-bottom: 8px;
+          margin-top: 8px;
+          border-radius: 6px;
+          font-size: 14px;
+          display: flex;
+          color: #fff;
+          align-items: center;
+          transition: background-color 0.5s ease;
+
+          button{
+            border-radius: 50%;
+            background-color:#ffffff;
+            margin-right: 5px;
+            border: none;
+
+            img{
+              height: 18px;
+              width: 18px;
+            }
+                 
+          } 
+          a {
+            text-decoration: none;
+            color: #000;
+          }
+          
+          &:hover{
+            background-color:hsl(0, 0%, 53%);
+          }
+        }
+      }
+    .chatBar {
+          background-color: #DDE6ED;
+          flex: 2;
+          margin: 8px;
+          border-radius: 8px;
+          position: relative;
+          border: 1px solid grey;
+          padding: 12px;
+          display: flex;
+          flex-direction: column;
+          justify-content: start;
+      
+          .chatCard{
+            display: flex;
+            color: rgb(0, 0, 0);
+            justify-content: space-between;
+
+            .chatInfo{
+              display: flex;
+              align-items: center;
+              img{
+                height: 18px;
+                width: 18px;
+              }
+            }
+          }
+          .search {
+            border-bottom: 1px solid gray;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+      
+            img {
+              align-self: center;
+              height: 30px;
+              width: 30px;
+            }
+      
+              .searchForm {
+                padding: 10px;
+      
+                input {
+                  background-color: transparent;
+                  border: none;
+                  color: #000;
+                  outline: none;
+      
+                  &::placeholder {
+                    color: #000;
+                  }
+                }
+              }
+            }
+          }
+    
+      .mainContainer {
+     
+        flex: 1;
+        margin: 8px;
+        border: 1px solid #000;
+        width: 25%;
+        height: 85vh;
+        overflow-y: scroll;
+        position: sticky;
+        top: 6px;
+      
+        .cardContainer {
+          background-color: #DDE6ED;
+          display: flex;
+          flex-direction: column;
+          border: 1px solid #000;
+          margin: 5px;
+          border-radius: 8px;
+      
+          img {
+            margin-top: 5px;
+            align-self: center;
+            border: 1px solid #000;
+            height: 240px;
+            width: 240px;
+            border-radius: 50%;
+          }
+      
+          h4 {
+            padding: 5px;
+          }
+      
+         .schoolCardInfo{
+          p {
+            padding: 5px;
+            color: rgb(0, 0, 0);
+          }
+          a{
+            text-decoration: none;
+            color: #000;
+          }
+          .newButton{
+            display: flex;
+            justify-content: center;
+            margin: 3px;
+          }
+         }
+        }
+      
+    } 
+    }
+  }
+
+    .sentBox{
+      header {
+        background-color: 212A3E;
+        position: relative;
+        display: flex;
+        border: 1px solid snow;
+        justify-content: space-between;
+        color: #F1F6F9;
+    
+        .cardInfo {
+          margin-left: 8px;
+          display: flex;
+          align-items: center;
+    
+          img {
+            height: 36px;
+            width: 36px;
+            border-radius: 50%;
+          }
+          .info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            p {
+              margin: 0;
+            }
+            .role {
+              font-size: 12px;
+              color: #242424;
+            }
+          }
+        }
+    
+        nav {
+          padding: 5px;
+          display: flex;
+          border: none;
+          overflow: scroll;
+          scrollbar-width: none;
+    
+          h4 {
+            margin-left: 8px;
+            font-family: Broadway;
+          }
+    
+          ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+    
+            li {
+              margin-right: 24px;
+    
+              label {
+                display: flex;
+                align-items: center;
+                border: 1px solid black;
+                border-radius: 8px;
+                transition: border-width 0.1s linear;
+    
+                img {
+                  height: 21px;
+                  width: 21px;
+                }
+    
+                a {
+                  text-decoration: none;
+                  color: #F1F6F9;
+                  padding: 3px;
+                  border-radius: 5px;
+    
+                  &:hover {
+                    color: hsl(0, 0%, 0%, 0.5);
+                  }
+                }
+    
+                &:hover {
+                  border-width: 3px;
+                }
+              }
+            }
+          }
+          &::-webkit-scrollbar {
+            display: none;
+          }
+        }
+      } 
+      main{
+        display: flex;
+  
+        .messageCreation{
+          background-color: #DDE6ED;
+          flex: 1;
+          position: relative;
+          padding-left: 12px;
+          padding-right: 12px;
+          border: none;
+          border-radius: 8px;
+          display: flex;
+          flex-direction: column;
+          margin: 8px;
+  
+          label{
+            height: 32px;
+            border: none;
+            margin-bottom: 8px;
+            margin-top: 8px;
+            border-radius: 6px;
+            font-size: 14px;
+            display: flex;
+            color: #fff;
+            align-items: center;
+            transition: background-color 0.5s ease;
+  
+            button{
+              border-radius: 50%;
+              background-color:#ffffff;
+              margin-right: 5px;
+              border: none;
+  
+              img{
+                height: 18px;
+                width: 18px;
+              }
+                   
+            } 
+            a {
+              text-decoration: none;
+              color: #000;
+            }
+            
+            &:hover{
+              background-color:hsl(0, 0%, 53%);
+            }
+          }
+        }
+        .chatBar {
+          background-color: #DDE6ED;
+          flex: 2;
+          margin: 8px;
+          border-radius: 8px;
+          position: relative;
+          border: 1px solid grey;
+          padding: 12px;
+          display: flex;
+          flex-direction: column;
+          justify-content: start;
+      
+          .chatCard{
+            display: flex;
+            color: rgb(0, 0, 0);
+            justify-content: space-between;
+
+            .chatInfo{
+              display: flex;
+              align-items: center;
+              img{
+                height: 18px;
+                width: 18px;
+              }
+            }
+          }
+          .search {
+            border-bottom: 1px solid gray;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+      
+            img {
+              align-self: center;
+              height: 30px;
+              width: 30px;
+            }
+      
+              .searchForm {
+                padding: 10px;
+      
+                input {
+                  background-color: transparent;
+                  border: none;
+                  color: #000;
+                  outline: none;
+      
+                  &::placeholder {
+                    color: #000;
+                  }
+                }
+              }
+            }
+          }
+      
+        .mainContainer {
+        flex: 1;
+        margin: 8px;
+        border: 1px solid #000;
+        width: 25%;
+        height: 85vh;
+        overflow-y: scroll;
+        position: sticky;
+        top: 6px;
+      
+        .cardContainer {
+          background-color: #DDE6ED;
+          display: flex;
+          flex-direction: column;
+          border: 1px solid #000;
+          margin: 5px;
+          border-radius: 8px;
+          border-radius: 8px;
+        
+            img {
+              margin-top: 5px;
+              align-self: center;
+              border: 1px solid #000;
+              height: 240px;
+              width: 240px;
+              border-radius: 50%;
+            }
+        
+            h4 {
+              padding: 5px;
+            }
+        
+            .schoolCardInfo{
+              p {
+                padding: 5px;
+                color: rgb(0, 0, 0);
+              }
+              a{
+                text-decoration: none;
+                color: #000;
+              }
+              .newButton{
+                display: flex;
+                justify-content: center;
+                margin: 3px;
+              }
+             }
+          }
+        
+      } 
+      }
+    }
+
+    .important{
+      header {
+        background-color: 212A3E;
+        position: relative;
+        display: flex;
+        border: 1px solid snow;
+        justify-content: space-between;
+        color: #F1F6F9;
+    
+        .cardInfo {
+          margin-left: 8px;
+          display: flex;
+          align-items: center;
+    
+          img {
+            height: 36px;
+            width: 36px;
+            border-radius: 50%;
+          }
+          .info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            p {
+              margin: 0;
+            }
+            .role {
+              font-size: 12px;
+              color: #242424;
+            }
+          }
+        }
+    
+        nav {
+          padding: 5px;
+          display: flex;
+          border: none;
+          overflow: scroll;
+          scrollbar-width: none;
+    
+          h4 {
+            margin-left: 8px;
+            font-family: Broadway;
+          }
+    
+          ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+    
+            li {
+              margin-right: 24px;
+    
+              label {
+                display: flex;
+                align-items: center;
+                border: 1px solid black;
+                border-radius: 8px;
+                transition: border-width 0.1s linear;
+    
+                img {
+                  height: 21px;
+                  width: 21px;
+                }
+    
+                a {
+                  text-decoration: none;
+                  color: #F1F6F9;
+                  padding: 3px;
+                  border-radius: 5px;
+    
+                  &:hover {
+                    color: hsl(0, 0%, 0%, 0.5);
+                  }
+                }
+    
+                &:hover {
+                  border-width: 3px;
+                }
+              }
+            }
+          }
+          &::-webkit-scrollbar {
+            display: none;
+          }
+        }
+      } 
+      main{
+        display: flex;
+  
+        .messageCreation{
+          background-color: #DDE6ED;
+          flex: 1;
+          position: relative;
+          padding-left: 12px;
+          padding-right: 12px;
+          border: none;
+          border-radius: 8px;
+          display: flex;
+          flex-direction: column;
+          margin: 8px;
+  
+          label{
+            height: 32px;
+            border: none;
+            margin-bottom: 8px;
+            margin-top: 8px;
+            border-radius: 6px;
+            font-size: 14px;
+            display: flex;
+            color: #fff;
+            align-items: center;
+            transition: background-color 0.5s ease;
+  
+            button{
+              border-radius: 50%;
+              background-color:#ffffff;
+              margin-right: 5px;
+              border: none;
+  
+              img{
+                height: 18px;
+                width: 18px;
+              }
+                   
+            } 
+            a {
+              text-decoration: none;
+              color: #000;
+            }
+            
+            &:hover{
+              background-color:hsl(0, 0%, 53%);
+            }
+          }
+        }
+        .chatBar {
+          background-color: #DDE6ED;
+          flex: 2;
+          margin: 8px;
+          border-radius: 8px;
+          position: relative;
+          border: 1px solid grey;
+          padding: 12px;
+          display: flex;
+          flex-direction: column;
+          justify-content: start;
+      
+          .chatCard{
+            display: flex;
+            color: rgb(0, 0, 0);
+            justify-content: space-between;
+
+            .chatInfo{
+              display: flex;
+              align-items: center;
+              img{
+                height: 18px;
+                width: 18px;
+              }
+            }
+          }
+          .search {
+            border-bottom: 1px solid gray;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+      
+            img {
+              align-self: center;
+              height: 30px;
+              width: 30px;
+            }
+      
+              .searchForm {
+                padding: 10px;
+      
+                input {
+                  background-color: transparent;
+                  border: none;
+                  color: #000;
+                  outline: none;
+      
+                  &::placeholder {
+                    color: #000;
+                  }
+                }
+              }
+            }
+          }
+      
+        .mainContainer {
+          flex: 1;
+          margin: 8px;
+          border: 1px solid #000;
+          width: 25%;
+          height: 85vh;
+          overflow-y: scroll;
+          position: sticky;
+          top: 6px;
+        
+          .cardContainer {
+            background-color: #DDE6ED;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #000;
+            margin: 5px;
+            border-radius: 8px;
+            img {
+              margin-top: 5px;
+              align-self: center;
+              border: 1px solid #000;
+              height: 240px;
+              width: 240px;
+              border-radius: 50%;
+            }
+        
+            h4 {
+              padding: 5px;
+            }
+        
+            .schoolCardInfo{
+              p {
+                padding: 5px;
+                color: rgb(0, 0, 0);
+              }
+              a{
+                text-decoration: none;
+                color: #000;
+              }
+              .newButton{
+                display: flex;
+                justify-content: center;
+                margin: 3px;
+              }
+             }
+          }
+        
+      } 
+      }
+    }
+    .archive{
+      header {
+        background-color: #212A3E;
+        position: relative;
+        display: flex;
+        border: 1px solid snow;
+        justify-content: space-between;
+        color: #F1F6F9;
+    
+        .cardInfo {
+          margin-left: 8px;
+          display: flex;
+          align-items: center;
+    
+          img {
+            height: 36px;
+            width: 36px;
+            border-radius: 50%;
+          }
+          .info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            p {
+              margin: 0;
+            }
+            .role {
+              font-size: 12px;
+              color: #242424;
+            }
+          }
+        }
+    
+        nav {
+          padding: 5px;
+          display: flex;
+          border: none;
+          overflow: scroll;
+          scrollbar-width: none;
+    
+          h4 {
+            margin-left: 8px;
+            font-family: Broadway;
+          }
+    
+          ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+    
+            li {
+              margin-right: 24px;
+    
+              label {
+                display: flex;
+                align-items: center;
+                border: 1px solid black;
+                border-radius: 8px;
+                transition: border-width 0.1s linear;
+    
+                img {
+                  height: 21px;
+                  width: 21px;
+                }
+    
+                a {
+                  text-decoration: none;
+                  color: #F1F6F9;
+                  padding: 3px;
+                  border-radius: 5px;
+    
+                  &:hover {
+                    color: hsl(0, 0%, 0%, 0.5);
+                  }
+                }
+    
+                &:hover {
+                  border-width: 3px;
+                }
+              }
+            }
+          }
+          &::-webkit-scrollbar {
+            display: none;
+          }
+        }
+      } 
+      main{
+        display: flex;
+  
+        .messageCreation{
+          background-color: #DDE6ED;
+          flex: 1;
+          position: relative;
+          padding-left: 12px;
+          padding-right: 12px;
+          border: none;
+          border-radius: 8px;
+          display: flex;
+          flex-direction: column;
+          margin: 8px;
+  
+          label{
+            height: 32px;
+            border: none;
+            margin-bottom: 8px;
+            margin-top: 8px;
+            border-radius: 6px;
+            font-size: 14px;
+            display: flex;
+            color: #fff;
+            align-items: center;
+            transition: background-color 0.5s ease;
+  
+            button{
+              border-radius: 50%;
+              background-color:#ffffff;
+              margin-right: 5px;
+              border: none;
+  
+              img{
+                height: 18px;
+                width: 18px;
+              }
+                   
+            } 
+            a {
+              text-decoration: none;
+              color: #000;
+            }
+            
+            &:hover{
+              background-color:hsl(0, 0%, 53%);
+            }
+          }
+        }
+        .chatBar {
+          background-color: #DDE6ED;
+          flex: 2;
+          margin: 8px;
+          border-radius: 8px;
+          position: relative;
+          border: 1px solid grey;
+          padding: 12px;
+          display: flex;
+          flex-direction: column;
+          justify-content: start;
+      
+          .chatCard{
+            display: flex;
+            color: rgb(0, 0, 0);
+            justify-content: space-between;
+
+            .chatInfo{
+              display: flex;
+              align-items: center;
+              img{
+                height: 18px;
+                width: 18px;
+              }
+            }
+          }
+          .search {
+            border-bottom: 1px solid gray;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+      
+            img {
+              align-self: center;
+              height: 30px;
+              width: 30px;
+            }
+      
+              .searchForm {
+                padding: 10px;
+      
+                input {
+                  background-color: transparent;
+                  border: none;
+                  color: #000;
+                  outline: none;
+      
+                  &::placeholder {
+                    color: #000;
+                  }
+                }
+              }
+            }
+          }
+      
+        .mainContainer {
+          flex: 1;
+          margin: 8px;
+          border: 1px solid #000;
+          width: 25%;
+          height: 85vh;
+          overflow-y: scroll;
+          position: sticky;
+          top: 6px;
+        
+          .cardContainer {
+            background-color: #DDE6ED;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #000;
+            margin: 5px;
+            border-radius: 8px;
+        
+            img {
+              margin-top: 5px;
+              align-self: center;
+              border: 1px solid #000;
+              height: 240px;
+              width: 240px;
+              border-radius: 50%;
+            }
+        
+            h4 {
+              padding: 5px;
+            }
+        
+            .schoolCardInfo{
+              p {
+                padding: 5px;
+                color: rgb(0, 0, 0);
+              }
+              a{
+                text-decoration: none;
+                color: #000;
+              }
+              .newButton{
+                display: flex;
+                justify-content: center;
+                margin: 3px;
+              }
+             }
+          }
+      } 
+      }
+    }
+
+    .chatNewContainer{
+      header {
+        background-color: 212A3E;
+        position: relative;
+        display: flex;
+        border: 1px solid snow;
+        justify-content: space-between;
+        color: #000;
+    
+        .cardInfo {
+          margin-left: 8px;
+          display: flex;
+          align-items: center;
+    
+          img {
+            height: 36px;
+            width: 36px;
+            border-radius: 50%;
+          }
+          .info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            p {
+              margin: 0;
+            }
+            .role {
+              font-size: 12px;
+              color: #242424;
+            }
+          }
+        }
+    
+        nav {
+          padding: 5px;
+          display: flex;
+          border: none;
+          overflow: scroll;
+          scrollbar-width: none;
+    
+          h4 {
+            margin-left: 8px;
+            font-family: Broadway;
+          }
+    
+          ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+    
+            li {
+              margin-right: 24px;
+    
+              label {
+                display: flex;
+                align-items: center;
+                border: 1px solid black;
+                border-radius: 8px;
+                transition: border-width 0.1s linear;
+    
+                img {
+                  height: 21px;
+                  width: 21px;
+                }
+    
+                a {
+                  text-decoration: none;
+                  color: #000;
+                  padding: 3px;
+                  border-radius: 5px;
+    
+                  &:hover {
+                    color: hsl(0, 0%, 0%, 0.5);
+                  }
+                }
+    
+                &:hover {
+                  border-width: 3px;
+                }
+              }
+            }
+          }
+          &::-webkit-scrollbar {
+            display: none;
+          }
+        }
+      } 
+      main{
+        display: flex;
+
+        .messageCreation{
+          background-color: #DDE6ED;
+          flex: 1;
+          position: relative;
+          padding-left: 12px;
+          padding-right: 12px;
+          border: none;
+          border-radius: 8px;
+          display: flex;
+          flex-direction: column;
+          margin: 8px;
+  
+          label{
+            height: 32px;
+            border: none;
+            margin-bottom: 8px;
+            margin-top: 8px;
+            border-radius: 6px;
+            font-size: 14px;
+            display: flex;
+            color: #fff;
+            align-items: center;
+            transition: background-color 0.5s ease;
+  
+            button{
+              border-radius: 50%;
+              background-color:#ffffff;
+              margin-right: 5px;
+              border: none;
+  
+              img{
+                height: 18px;
+                width: 18px;
+              }
+                   
+            } 
+            a {
+              text-decoration: none;
+              color: #000;
+            }
+            
+            &:hover{
+              background-color:hsl(0, 0%, 53%);
+            }
+          }
+        }
+
+        .newChat{
+          margin: 8px;
+          flex: 8;
+          height: 88vh;
+
+          form{
+            display: flex;
+            flex-direction: column;
+
+            .textarea-container{
+              flex: 1;
+
+              textarea{
+                height: 70vh;
+                width: 100%;
+                resize: none;
+              }
+            }
+          }
+        }
+      }
+
+    }
+  }

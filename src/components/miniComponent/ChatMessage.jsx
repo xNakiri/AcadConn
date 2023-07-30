@@ -44,6 +44,7 @@ import MessageContent from "../MessageContent";
   
     const handleAddData = async () => {
       
+     
       try {
         // Create a new object with the provided name, age, and image URL
         const newData = {
@@ -85,7 +86,7 @@ import MessageContent from "../MessageContent";
   
             // Update the document in Firestore with the updated array and new data object
             await updateDoc(docRef, {
-              userSeen:  false,
+              
               messages: updatedArray,
             });
             console.log('success');
@@ -99,8 +100,7 @@ import MessageContent from "../MessageContent";
         } else {
           // Update the document in Firestore with the updated array and new data object (without image URL)
           await updateDoc(docRef, {
-            userSeen: false,
-            time: new Date().toISOString(),
+            
             messages: updatedArray,
           });
           console.log('success');

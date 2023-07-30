@@ -19,12 +19,13 @@ const SchoolBar = () => {
     getSchool();
   }, []);
 
+  
   const handleSelect = async (itemId) => {
-    console.log(itemId)
-    dispatch({type:"CHANGE_USER", payload: itemId});
     
-    let path = `/message`; 
+    dispatch({type:"CHANGE_USER_INFO", payload: itemId});
+    let path = `/newChat`; 
     navigate(path);
+   
   };
 
   return (

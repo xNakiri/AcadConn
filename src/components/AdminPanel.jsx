@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import {db, storage} from "../firebase"
 import {  ref, uploadBytes, getDownloadURL, uploadBytesResumable } from 'firebase/storage';
-import { collection, addDoc, setDoc, doc } from 'firebase/firestore';
+import { collection, addDoc, setDoc, doc,updateDoc, query, where, getDocs } from 'firebase/firestore';
 import { v4 as uuidv4 } from 'uuid';
 
 
@@ -13,8 +13,19 @@ const AdminPanel = () => {
   const [uploadProgress, setUploadProgress] = useState(0);
   const [schoolDescription, setSchoolDescription] = useState('');
   const [schoolImage, setSchoolImage] = useState(null);
-  
-  
+  const [username, setUsername] = useState('');
+  const [ err, setErr ] = useState(false);
+  const [user,setUser] = useState([]);
+  const [userType, setUserType] = useState('');
+  const [selectedValue, setSelectedValue] = useState('');
+  const [updateSuccess, setUpdateSuccess] = useState(false);
+  const [name, setName] = useState('');
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [age, setAge] = useState('');
+  const [section, setSection] = useState('');
+  const [userId, setUserId] = useState('');
+
     const handleImageChange = (e) => {
       if (e.target.files[0]) {
         setSchoolImage(e.target.files[0]);
@@ -58,8 +69,6 @@ const AdminPanel = () => {
               schoolDescription,
               schoolImage: downloadURL,
             });
-  
-           
           } 
         );
         console.log("success")
@@ -76,56 +85,166 @@ const AdminPanel = () => {
     };
   
 
-
-  const [selectedValue, setSelectedValue] = useState('option1');
+    const handleRadioChange = (event) => {
+      setSelectedValue(event.target.value);
+    };
   
   // Function to handle radio button change
-  const handleRadioChange = (event) => {
-    setSelectedValue(event.target.value);
+  const handleUpdate = async () => {
+    try {
+      // Assuming 'userInfo' is the name of your Firestore collection and 'userId' is the user to update
+      const userRef = doc(db, 'userInfo', user.id);
+  
+      // Create a partial update object with only the non-empty fields
+      const updateData = {
+        ...(name && { name }),
+        ...(firstName && { firstName }),
+        ...(lastName && { lastName }),
+        ...(age && { age }),
+        ...(section && { section }),
+        ...(userId && { userId }),
+        userType: selectedValue,
+      };
+  
+      // Perform a partial update using the `set` method with the option `{ merge: true }`
+      await setDoc(userRef, updateData, { merge: true });
+  
+      setError(null);
+      console.log('Data updated successfully');
+      setUser([]);
+      setName('');
+      setFirstName('');
+      setLastName('');
+      setAge('');
+      setSection('');
+      setUserType('');
+      setUserId('');
+    } catch (err) {
+      setError('Error updating data: ' + err.message);
+      console.error('Error updating data:', err);
+    }
+  };
+  
+
+  const handleKey = (e) => {
+    if (e.code === 'Enter') {
+      handleSearch();
+    }
   };
 
+  const handleSearch = async () => {
+    const q = query(collection(db, 'userInfo'), where('name', '==', username));
+
+    try {
+      const querySnapshot = await getDocs(q);
+      if (!querySnapshot.empty) {
+        // Assuming there's only one user with the given username
+        const doc = querySnapshot.docs[0];
+        setUser({ id: doc.id, ...doc.data() });
+        setSelectedValue(doc.data().userType); // Set the radio button value based on the user's userType
+        setErr(false);
+        console.log('User found');
+      } else {
+        setUser(null);
+        setSelectedValue(''); // Reset radio button value when user not found
+        setErr(true);
+        console.log('User not found');
+      }
+    } catch (err) {
+      console.error('Error searching for user:', err);
+      setErr(true);
+    }
+  };
+
+  const handleSelect = (itemId) => {
+    console.log(itemId);
+    setSelectedValue(user.userType); // Set the radio button value based on the selected user's userType
+  };
+
+  
+  
+  
   return (
     <>
       <main>
         <div className='adminEditAccount'>
           <p>Name</p>
           
-          <form>
-          <input type='text' />
-          <div className='radioButton'>
-            <label htmlFor="option1">
-            <input
-              type="radio"
-              id="option1"
-              name="radioGroup"
-              value="Student"
-              checked={selectedValue === 'Student'}
-              onChange={handleRadioChange}
-            />
-            Student</label>
+          
+          <input
+            type='text'
+            placeholder='Find a user'
+            onKeyDown={handleKey}
+            onChange={(e) => setUsername(e.target.value)}
+            value={username}
+          />
 
-            <label htmlFor="option2">
-            <input
-              type="radio"
-              id="option2"
-              name="radioGroup"
-              value="Teacher"
-              checked={selectedValue === 'Teacher'}
-              onChange={handleRadioChange}
-            />
-            Teacher</label>
-            <label htmlFor="option3">
-            <input
-              type="radio"
-              id="option3"
-              name="radioGroup"
-              value="Admin"
-              checked={selectedValue === 'Admin'}
-              onChange={handleRadioChange}
-            />
-            Admin</label>
+          {err && <span>User not found!</span>}
+          {user && (
+            <div className='userChat' onClick={() => handleSelect(user.id)}>
+              <div className='userChatInfo'>
+                <span>{user.name}</span>
+              </div>
+            </div>
+          )}
+    <p>{`current Account : ${user?.name}`}</p>
+    
+    <label>Name:</label>
+              <input type="text" value={name} placeholder={user.name} onChange={(e) => setName(e.target.value)} />
+
+              <label>First Name:</label>
+              <input type="text" value={firstName} placeholder={user.firstName} onChange={(e) => setFirstName(e.target.value)} />
+
+              <label>Last Name:</label>
+              <input type="text" value={lastName} placeholder={user.lastName} onChange={(e) => setLastName(e.target.value)} />
+
+              <label>Age:</label>
+              <input type="number" value={age} placeholder={user.age} onChange={(e) => setAge(e.target.value)} />
+
+              <label>Section:</label>
+              <input type="text" value={section} placeholder={user.section} onChange={(e) => setSection(e.target.value)} />
+
+              <label>ID:</label>
+              <input type="text" value={userId} placeholder={user.userId} onChange={(e) => setUserId(e.target.value)} />
+          <div className='radioButton'>
+
+            <label htmlFor='option1'>
+              <input
+                type='radio'
+                id='option1'
+                name='radioGroup'
+                value='STUDENT'
+                checked={selectedValue === 'STUDENT'}
+                onChange={handleRadioChange}
+              />
+              Student
+            </label>
+
+            <label htmlFor='option2'>
+              <input
+                type='radio'
+                id='option2'
+                name='radioGroup'
+                value='TEACHER'
+                checked={selectedValue === 'TEACHER'}
+                onChange={handleRadioChange}
+              />
+              Teacher
+            </label>
+            <label htmlFor='option3'>
+              <input
+                type='radio'
+                id='option3'
+                name='radioGroup'
+                value='ADMIN'
+                checked={selectedValue === 'ADMIN'}
+                onChange={handleRadioChange}
+              />
+              Admin
+            </label>
           </div>
-          </form>
+          <button onClick={handleUpdate}>Update User Type</button>
+          {updateSuccess && <p>Data updated successfully!</p>}
         </div>
 
         <div className='adminPost'>

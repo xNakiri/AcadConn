@@ -13,7 +13,7 @@ const ProfileInfo = () => {
   const [lastName, setLastName] = useState('');
   const [age, setAge] = useState('');
   const [section, setSection] = useState('');
-  const [id, setId] = useState('');
+  const [userId, setUserId] = useState('');
   const [userType, setUserType] = useState('');
   const [photoFile, setPhotoFile] = useState(null);
   
@@ -67,8 +67,8 @@ const ProfileInfo = () => {
     if (section.trim() !== '') {
       updatedUserData.section = section;
     }
-    if (id.trim() !== '') {
-      updatedUserData.id = id;
+    if (userId.trim() !== '') {
+      updatedUserData.userId = userId;
     }
     if (userType.trim() !== '') {
       updatedUserData.userType = userType;
@@ -141,7 +141,7 @@ const ProfileInfo = () => {
               <input type="text" value={section} placeholder={users.section} onChange={(e) => setSection(e.target.value)} />
 
               <label>ID:</label>
-              <input type="text" value={id} placeholder={users.id} onChange={(e) => setId(e.target.value)} />
+              <input type="text" value={userId} placeholder={users.userId} onChange={(e) => setUserId(e.target.value)} />
 
               <label>Photo:</label>
               <input type="file" onChange={(e) => setPhotoFile(e.target.files[0])} />

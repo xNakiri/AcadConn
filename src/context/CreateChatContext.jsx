@@ -27,7 +27,7 @@ export const NewMessageContextProvider = ({ children }) => {
 
   const [state, dispatch] = useReducer(newMessageReducer, INITIAL_STATE);
 
-  console.log(state);
+  console.log(`message${state.userInfo}`);
 
   return (
     <NewMessageContext.Provider value={{ data: state, dispatch }}>

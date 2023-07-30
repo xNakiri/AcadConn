@@ -20,7 +20,8 @@ const MessageContent = ({ message }) => {
   return (
     <>
       <div className='chatSubject'></div>
-      <div ref={ref} className={`message ${message.senderUID === currentUser.uid && 'owner'}`}>
+        
+            <div ref={ref} className={`message ${message.senderUID === currentUser.uid && 'owner'}`}>
         <div className='content'>
           {/* Use Linkify component to automatically convert links */}
           <Linkify>

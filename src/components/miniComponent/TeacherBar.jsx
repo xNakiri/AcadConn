@@ -1,11 +1,12 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { AuthContext } from '../../context/AuthContext';
-import { ChatContext } from '../../context/ChatContext';
+
 
 import { collection, getDocs, query, where, doc,getDoc,setDoc} from 'firebase/firestore';
 import { db } from '../../firebase';
 import { useNavigate } from "react-router-dom";
 import { v4 as uuidv4 } from 'uuid';
+import { NewMessageContext } from '../../context/CreateChatContext';
 const TeacherBar = () => {
 
     let navigate = useNavigate();
@@ -13,7 +14,7 @@ const TeacherBar = () => {
   const userInfoCollection = collection(db, 'userInfo');
   const [teacher, setTeacher] = useState([]);
   const [admin, setAdmin] = useState([]);
-  const {dispatch} = useContext(ChatContext)
+  const {dispatch} = useContext(NewMessageContext)
  
   useEffect(() => {
     const getUser = async () => {
@@ -49,32 +50,20 @@ const TeacherBar = () => {
     getUser();
   }, [currentUser]); 
 
-  const handleSelect = async () => {
-    console.log('clicked');
-    //check whether the group(chats in firestore) exists, if not create
-    const uid = uuidv4();
-    
-    try {
-      const res = await getDoc(doc(db, "MessageContent", uid));
-
-      if (!res.exists()) {
-        //create a chat in chats collection
-        await setDoc(doc(db, "messageContent", uid), {chatID: uid,senderUID: users.name ,userUID: user.uid, messages: [] });
-
-        //create user chats
-       console.log(uid)
-       console.log(currentUser.uid)
-       
-      }
-    } catch (err) {console.error(err)}
-   
-  };
+  
   // const handleSelect = async (itemId) => {
   //   dispatch({type:"CHANGE_USER", payload: itemId});
   //   console.log(itemId)
   //   let path = `message`; 
   //   navigate(path);
   // };
+  const handleSelect = async (itemId) => {
+    
+    dispatch({type:"CHANGE_USER_INFO", payload: itemId});
+    let path = `/newChat`; 
+    navigate(path);
+   
+  };
   return (
     <>
       
@@ -86,7 +75,7 @@ const TeacherBar = () => {
     <div className='teacherInfo'>
         {teacher.map((teacher) => {
           return (
-            <div className='teacherCard' onClick={() => handleSelect(teacher.uid)} key={teacher.id}>
+            <div className='teacherCard' onClick={() => handleSelect(teacher.firstName)} key={teacher.id}>
               <div className='teacherFlex'>
               <img src={teacher.photoFile} alt="" />
               <p>{teacher.name}</p>
@@ -102,7 +91,7 @@ const TeacherBar = () => {
     <div className='teacherInfo'>
         {admin.map((admin) => {
           return (
-            <div className='teacherCard' onClick={() => handleSelect(admin.uid)} key={admin.id}>
+            <div className='teacherCard' onClick={() => handleSelect(admin.name)} key={admin.id}>
               <div className='teacherFlex'>
               <img src={admin.photoFile} alt="" />
               <p>{admin.name}</p>
